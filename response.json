@@ -1,0 +1,310 @@
+{
+    "status": "SUCCESS",
+    "message": null,
+    "data": {
+        "total": 1667,
+        "start": 1,
+        "results": [
+            {
+                "id": "n3D96OBP",
+                "name": "As It Was",
+                "type": "",
+                "album": {
+                    "id": "33942263",
+                    "name": "As It Was",
+                    "url": "https://www.jiosaavn.com/album/as-it-was/1qFCMrTM6vE_"
+                },
+                "year": "2022",
+                "releaseDate": null,
+                "duration": "167",
+                "label": "Columbia",
+                "primaryArtists": "Harry Styles",
+                "primaryArtistsId": "577199",
+                "featuredArtists": "",
+                "featuredArtistsId": "",
+                "explicitContent": 0,
+                "playCount": "8116368",
+                "language": "english",
+                "hasLyrics": "true",
+                "url": "https://www.jiosaavn.com/song/as-it-was/HlsvCEJ-dWM",
+                "copyright": "(P) 2022 Erskine Records Limited, under exclusive license to Columbia Records, a Division of Sony Music Entertainment",
+                "image": [
+                    {
+                        "quality": "50x50",
+                        "link": "https://c.saavncdn.com/720/As-It-Was-English-2022-20220401035858-50x50.jpg"
+                    },
+                    {
+                        "quality": "150x150",
+                        "link": "https://c.saavncdn.com/720/As-It-Was-English-2022-20220401035858-150x150.jpg"
+                    },
+                    {
+                        "quality": "500x500",
+                        "link": "https://c.saavncdn.com/720/As-It-Was-English-2022-20220401035858-500x500.jpg"
+                    }
+                ],
+                "downloadUrl": [
+                    {
+                        "quality": "12kbps",
+                        "link": "https://aac.saavncdn.com/720/ae1594f81fac092f502317bc4e25a5b2_12.mp4"
+                    },
+                    {
+                        "quality": "48kbps",
+                        "link": "https://aac.saavncdn.com/720/ae1594f81fac092f502317bc4e25a5b2_48.mp4"
+                    },
+                    {
+                        "quality": "96kbps",
+                        "link": "https://aac.saavncdn.com/720/ae1594f81fac092f502317bc4e25a5b2_96.mp4"
+                    },
+                    {
+                        "quality": "160kbps",
+                        "link": "https://aac.saavncdn.com/720/ae1594f81fac092f502317bc4e25a5b2_160.mp4"
+                    },
+                    {
+                        "quality": "320kbps",
+                        "link": "https://aac.saavncdn.com/720/ae1594f81fac092f502317bc4e25a5b2_320.mp4"
+                    }
+                ]
+            },
+            {
+                "id": "It96yG1r",
+                "name": "As It Was",
+                "type": "",
+                "album": {
+                    "id": "35081244",
+                    "name": "Harry's House",
+                    "url": "https://www.jiosaavn.com/album/harrys-house/lM7QfO4kWRY_"
+                },
+                "year": "2022",
+                "releaseDate": null,
+                "duration": "167",
+                "label": "Columbia",
+                "primaryArtists": "Harry Styles",
+                "primaryArtistsId": "577199",
+                "featuredArtists": "",
+                "featuredArtistsId": "",
+                "explicitContent": 0,
+                "playCount": "8116313",
+                "language": "english",
+                "hasLyrics": "true",
+                "url": "https://www.jiosaavn.com/song/as-it-was/ORxSBw13BkE",
+                "copyright": "(P) 2022 Erskine Records Limited, under exclusive license to Columbia Records, a Division of Sony Music Entertainment",
+                "image": [
+                    {
+                        "quality": "50x50",
+                        "link": "https://c.saavncdn.com/061/Harry-s-House-English-2022-20220518224913-50x50.jpg"
+                    },
+                    {
+                        "quality": "150x150",
+                        "link": "https://c.saavncdn.com/061/Harry-s-House-English-2022-20220518224913-150x150.jpg"
+                    },
+                    {
+                        "quality": "500x500",
+                        "link": "https://c.saavncdn.com/061/Harry-s-House-English-2022-20220518224913-500x500.jpg"
+                    }
+                ],
+                "downloadUrl": [
+                    {
+                        "quality": "12kbps",
+                        "link": "https://aac.saavncdn.com/061/3cd80564e24ad83245334f8a0e7fb126_12.mp4"
+                    },
+                    {
+                        "quality": "48kbps",
+                        "link": "https://aac.saavncdn.com/061/3cd80564e24ad83245334f8a0e7fb126_48.mp4"
+                    },
+                    {
+                        "quality": "96kbps",
+                        "link": "https://aac.saavncdn.com/061/3cd80564e24ad83245334f8a0e7fb126_96.mp4"
+                    },
+                    {
+                        "quality": "160kbps",
+                        "link": "https://aac.saavncdn.com/061/3cd80564e24ad83245334f8a0e7fb126_160.mp4"
+                    },
+                    {
+                        "quality": "320kbps",
+                        "link": "https://aac.saavncdn.com/061/3cd80564e24ad83245334f8a0e7fb126_320.mp4"
+                    }
+                ]
+            },
+            {
+                "id": "WCI1cyd7",
+                "name": "As It Was",
+                "type": "",
+                "album": {
+                    "id": "38157989",
+                    "name": "As It Was",
+                    "url": "https://www.jiosaavn.com/album/as-it-was/3Va5bO0621w_"
+                },
+                "year": "2022",
+                "releaseDate": null,
+                "duration": "190",
+                "label": "Color Study",
+                "primaryArtists": "Vancouver Sleep Clinic, Amelia Magdalena, Pop Goes Ambient",
+                "primaryArtistsId": "847594, 14215957, 14452891",
+                "featuredArtists": "",
+                "featuredArtistsId": "",
+                "explicitContent": 0,
+                "playCount": "2358",
+                "language": "english",
+                "hasLyrics": "true",
+                "url": "https://www.jiosaavn.com/song/as-it-was/JysiABdJUwQ",
+                "copyright": "© 2022 Cool Online",
+                "image": [
+                    {
+                        "quality": "50x50",
+                        "link": "https://c.saavncdn.com/870/As-It-Was-English-2022-20220913053406-50x50.jpg"
+                    },
+                    {
+                        "quality": "150x150",
+                        "link": "https://c.saavncdn.com/870/As-It-Was-English-2022-20220913053406-150x150.jpg"
+                    },
+                    {
+                        "quality": "500x500",
+                        "link": "https://c.saavncdn.com/870/As-It-Was-English-2022-20220913053406-500x500.jpg"
+                    }
+                ],
+                "downloadUrl": [
+                    {
+                        "quality": "12kbps",
+                        "link": "https://aac.saavncdn.com/870/c582fdf7d40bffa35ba7ea69bbd66f7e_12.mp4"
+                    },
+                    {
+                        "quality": "48kbps",
+                        "link": "https://aac.saavncdn.com/870/c582fdf7d40bffa35ba7ea69bbd66f7e_48.mp4"
+                    },
+                    {
+                        "quality": "96kbps",
+                        "link": "https://aac.saavncdn.com/870/c582fdf7d40bffa35ba7ea69bbd66f7e_96.mp4"
+                    },
+                    {
+                        "quality": "160kbps",
+                        "link": "https://aac.saavncdn.com/870/c582fdf7d40bffa35ba7ea69bbd66f7e_160.mp4"
+                    },
+                    {
+                        "quality": "320kbps",
+                        "link": "https://aac.saavncdn.com/870/c582fdf7d40bffa35ba7ea69bbd66f7e_320.mp4"
+                    }
+                ]
+            },
+            {
+                "id": "PwrYMn69",
+                "name": "As It Was",
+                "type": "",
+                "album": {
+                    "id": "37075156",
+                    "name": "As It Was",
+                    "url": "https://www.jiosaavn.com/album/as-it-was/hq9L2arbKp8_"
+                },
+                "year": "2022",
+                "releaseDate": null,
+                "duration": "226",
+                "label": "Bright Antenna",
+                "primaryArtists": "Prep",
+                "primaryArtistsId": "869954",
+                "featuredArtists": "",
+                "featuredArtistsId": "",
+                "explicitContent": 0,
+                "playCount": "4202",
+                "language": "english",
+                "hasLyrics": "true",
+                "url": "https://www.jiosaavn.com/song/as-it-was/IB8ZaDleAQo",
+                "copyright": "© 2022 Bright Antenna Records",
+                "image": [
+                    {
+                        "quality": "50x50",
+                        "link": "https://c.saavncdn.com/113/As-It-Was-English-2022-20220805064652-50x50.jpg"
+                    },
+                    {
+                        "quality": "150x150",
+                        "link": "https://c.saavncdn.com/113/As-It-Was-English-2022-20220805064652-150x150.jpg"
+                    },
+                    {
+                        "quality": "500x500",
+                        "link": "https://c.saavncdn.com/113/As-It-Was-English-2022-20220805064652-500x500.jpg"
+                    }
+                ],
+                "downloadUrl": [
+                    {
+                        "quality": "12kbps",
+                        "link": "https://aac.saavncdn.com/113/06b6ad7a99cc70b1b2c396f099daf629_12.mp4"
+                    },
+                    {
+                        "quality": "48kbps",
+                        "link": "https://aac.saavncdn.com/113/06b6ad7a99cc70b1b2c396f099daf629_48.mp4"
+                    },
+                    {
+                        "quality": "96kbps",
+                        "link": "https://aac.saavncdn.com/113/06b6ad7a99cc70b1b2c396f099daf629_96.mp4"
+                    },
+                    {
+                        "quality": "160kbps",
+                        "link": "https://aac.saavncdn.com/113/06b6ad7a99cc70b1b2c396f099daf629_160.mp4"
+                    },
+                    {
+                        "quality": "320kbps",
+                        "link": "https://aac.saavncdn.com/113/06b6ad7a99cc70b1b2c396f099daf629_320.mp4"
+                    }
+                ]
+            },
+            {
+                "id": "5VcgmLxQ",
+                "name": "As It Was (Acoustic)",
+                "type": "",
+                "album": {
+                    "id": "34069576",
+                    "name": "As It Was (Acoustic)",
+                    "url": "https://www.jiosaavn.com/album/as-it-was-acoustic/yCZF7zOBR,Y_"
+                },
+                "year": "2022",
+                "releaseDate": null,
+                "duration": "196",
+                "label": "Tristar Records",
+                "primaryArtists": "Hannah's Yard",
+                "primaryArtistsId": "1334901",
+                "featuredArtists": "",
+                "featuredArtistsId": "",
+                "explicitContent": 0,
+                "playCount": "3232",
+                "language": "english",
+                "hasLyrics": "false",
+                "url": "https://www.jiosaavn.com/song/as-it-was-acoustic/RT4IVhl8T2I",
+                "copyright": "© 2022 Tristar Records Limited",
+                "image": [
+                    {
+                        "quality": "50x50",
+                        "link": "https://c.saavncdn.com/386/As-It-Was-Acoustic--English-2022-20220406143838-50x50.jpg"
+                    },
+                    {
+                        "quality": "150x150",
+                        "link": "https://c.saavncdn.com/386/As-It-Was-Acoustic--English-2022-20220406143838-150x150.jpg"
+                    },
+                    {
+                        "quality": "500x500",
+                        "link": "https://c.saavncdn.com/386/As-It-Was-Acoustic--English-2022-20220406143838-500x500.jpg"
+                    }
+                ],
+                "downloadUrl": [
+                    {
+                        "quality": "12kbps",
+                        "link": "https://aac.saavncdn.com/386/49b66985273b7c5f6e6ac452894cc597_12.mp4"
+                    },
+                    {
+                        "quality": "48kbps",
+                        "link": "https://aac.saavncdn.com/386/49b66985273b7c5f6e6ac452894cc597_48.mp4"
+                    },
+                    {
+                        "quality": "96kbps",
+                        "link": "https://aac.saavncdn.com/386/49b66985273b7c5f6e6ac452894cc597_96.mp4"
+                    },
+                    {
+                        "quality": "160kbps",
+                        "link": "https://aac.saavncdn.com/386/49b66985273b7c5f6e6ac452894cc597_160.mp4"
+                    },
+                    {
+                        "quality": "320kbps",
+                        "link": "https://aac.saavncdn.com/386/49b66985273b7c5f6e6ac452894cc597_320.mp4"
+                    }
+                ]
+            }
+        ]
+    }
+}

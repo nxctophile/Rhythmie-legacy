@@ -5,7 +5,7 @@ function HomePageCards(props) {
   return (
     <div key={props.id} onClick={() => props.homeCardSearch(props.homeCardTitle)} className="homeCard">
       <img id="homeCardImg" src={props.homeCardImg} alt="Card" />
-      <div id="homeCardTitle">{props.homeCardTitle}</div>
+      <div id="homeCardTitle" dangerouslySetInnerHTML={{ __html: props.homeCardTitle }}></div>
     </div>
   );
 }

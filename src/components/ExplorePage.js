@@ -38,6 +38,7 @@ function ExplorePage(props) {
     //     return duration;
     // }
     function playMusic(ID) {
+
         props.setMusic(ID);
     }
     function songResults() {

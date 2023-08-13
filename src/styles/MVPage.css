@@ -1,0 +1,87 @@
+#MVContainer {
+    display: flex;
+    margin-top: 150px;
+    align-items: center;
+    flex-direction: column;
+}
+#video {
+    height: 450px;
+    width: 800px;
+    background: #222;
+    border-radius: 30px;
+    overflow: hidden;
+}
+#video > video {
+    height: 100%;
+    width: 100%;
+}
+#videoInfo {
+    width: 800px;
+}
+#videoTitle {
+    height: 25px;
+    background: #222;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+#videoDescription {
+    height: 100px;
+    background: #222;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+#recommendations {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#recommendation {
+    display: flex;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 20px;
+}
+#recommendation:hover {
+    background: #111;
+    transform: scale(1.02);
+    box-shadow: 0 0 20px #111;
+    cursor: pointer;
+}
+#recommendationArt {
+    height: 200px;
+    width: 200px;
+    background: #222;
+    border-radius: 20px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#recommendationInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 50px;
+}
+#recommendationTitle {
+    height: 20px;
+    width: 700px;
+    background: #222;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+#recommendationArtist {
+    height: 20px;
+    width: 300px;
+    background: #222;
+    border-radius: 10px;
+}
+#playRecommendation {
+    opacity: 0;
+    width: 38px;
+}
+#recommendationArt:hover > #playRecommendation {
+    opacity: .7;
+}

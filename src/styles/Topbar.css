@@ -38,9 +38,7 @@
   height: 63px;
   z-index: 2;
   text-align: center;
-  background-color: #fff;
-  border-top-left-radius: 30px;
-  box-shadow: 0 0 5px #777;
+  background: transparent;
 }
 #searchBar {
   margin: 12px;
@@ -49,17 +47,22 @@
 #searchBox {
   padding: 7px;
   padding-left: 15px;
-  width: 300px;
+  height: 30px;
+  width: 400px;
   font-size: 17px;
   outline: none;
-  border-radius: 20px;
-  border-style: solid;
-  /*margin-left: 40px;*/
+  border-radius: 15px;
+  border: none;
+  background: #222;
+  margin-top: 15px;
+  caret-color: #6f16ff;
+  filter: drop-shadow(0 0 20px #000);
 }
 #searchBox:focus {
-  box-shadow: 0 0 10px #8b42ff;
+  box-shadow: 0 0 15px #383344;
 }
 #searchButton {
+  display: none;
   margin-left: -20px;
   padding: 9px;
   font-size: 15px;
@@ -86,13 +89,10 @@
   top: 0;
   right: 10px;
 }
-#userAccountPanel > button {
-  font-size: 20px;
-  margin: 8px 10px;
-  padding: 10px;
-  border-radius: 10px;
-  border-style: solid;
-  transition: .2s;
+#userAccountPanel > img {
+  position: relative;
+  top: 20px;
+  right: 20px;
 }
 #userAccountPanel > button:hover {
   cursor: pointer;

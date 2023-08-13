@@ -1,9 +1,24 @@
 * {
   font-family: 'Raleway', sans-serif;
   transition: .2s;
+  color: #fff;
+  outline: none;
+}
+body {
+  overflow-x: hidden;
+  background: #171717;
 }
 #body{
   overflow-x: hidden;
+  background: #050505;
+  border-radius: 60px;
+  border-top-right-radius: 0px;
+  color:#fff;
+  height: 90vh;
+  z-index: 3;
+  width: 85.9%;
+  position: absolute;
+  left: 285px;
 }
 a {
   text-decoration: none;
@@ -15,4 +30,7 @@ img {
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
+}
+#musicArt {
+  visibility: hidden;
 }

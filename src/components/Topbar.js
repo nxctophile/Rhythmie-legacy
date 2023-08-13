@@ -3,6 +3,7 @@ import '../styles/Topbar.css';
 import search from '../resources/search.png';
 import icon from "../resources/icon.png"
 import { Link } from "react-router-dom";
+import accountIcon from '../resources/user-icon.png';
 
 function Topbar(props) {
   function handleClearBox () {
@@ -30,22 +31,15 @@ function Topbar(props) {
                   <img src={search} id="searchIcon" alt="Search" />
                 </Link>
             </div>
-
-
-      <div id="theme">
-        <img id="themeButton" onClick={props.themeButton} src={props.themeState} alt="Theme Button" />
-      </div>
         <div id="searchBar">
-        
-            <input style={{background: `${props.searchBoxTheme}`, color: `${props.textColor}`}} onChange={props.searchHandler} placeholder="Search for a song, album or artist" id="searchBox" type="text"/>
+            <input style={{background: `${props.searchBoxTheme}`, color: `${props.textColor}`}} onChange={props.searchHandler} placeholder="What's on your mind?" id="searchBox" type="text"/>
             <span onClick={handleClearBox} id="clearBox" style={{background: `${props.searchBoxTheme}`}} className="material-symbols-outlined">close</span>
-                    <button onClick={props.searchHandler} id="searchButton">
-                        Search
-                    </button>
+            <button onClick={props.searchHandler} id="searchButton">
+                Search
+            </button>
         </div>
         <div id="userAccountPanel">
-            <button style={{color: `${props.textColor}`}} onClick={props.accountButtonHandler} id="loginButton">Login</button>
-            <button onClick={props.accountButtonHandler} id="signupButton">Sign Up</button>
+            <img src={accountIcon} />
         </div>
     </div>
     </>

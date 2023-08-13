@@ -22,7 +22,7 @@ function TopResults(props) {
             </div>
         <div className="topSearchIcons" id="searchedIcons">
             <img draggable={false} onClick={() => {props.playMusic(props.songID)}} id="searchedPlayButton" className="searchedIcons" src={play} alt="" />
-            <img draggable={false} id="downloadSearchButton" className="searchedIcons" src={download} alt="" />
+            {/* <img draggable={false} id="downloadSearchButton" className="searchedIcons" src={download} alt="" /> */}
             <img draggable={false} id="searchedFavButton" className="searchedIcons" src={unfav} alt="" />
             <img draggable={false} id="searchedOptionButton" className="searchedIcons" src={dots} alt="" />
         </div>

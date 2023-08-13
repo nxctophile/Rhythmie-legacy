@@ -2,10 +2,10 @@ import React from 'react'
 import '../styles/Sidebar.css'
 import icon from "../resources/icon.png"
 import { Link } from 'react-router-dom'
-// import home from "../resources/home.png"
-// import trending from "../resources/trending.png"
-// import top from "../resources/top.png"
-// import library from "../resources/library.png"
+import home from "../resources/home.png"
+import explore from "../resources/explore.png"
+import mv from "../resources/mv.png"
+import library from "../resources/library.png"
 
 function Sidebar(props) {
   return (
@@ -17,15 +17,14 @@ function Sidebar(props) {
                     Rhythmie
                 </div>
                 <div id="alpha">
-                    Alpha
+                    In-Dev
                 </div>
             </div>
         </div>
         <div id="navMenu">
             <Link id="active" className="navMenuItem" style={{color: `${props.textColor}`}} to="/">
                 <div>
-                    {/* <img className="navMenuIcon" src={home} alt="Home icon"/> */}
-                    <span id="navMenuIcon" className="material-symbols-outlined">home</span>
+                     <img className="navMenuIcon" src={home} alt="Home icon"/>
                         <span className="navMenuText">
                             Home
                         </span>
@@ -33,35 +32,23 @@ function Sidebar(props) {
             </Link>
             <Link className="navMenuItem" onClick={props.mountExplore} style={{color: `${props.textColor}`}} to="/explore">
                 <div>
-                    {/* <img className="navMenuIcon" src={trending} alt="Trending icon"/> */}
-                    <span id="navMenuIcon" className="material-symbols-outlined">explore</span>
+                     <img className="navMenuIcon" src={explore} alt="Explore"/>
                         <span className="navMenuText">
                             Explore
                         </span>
                 </div>
             </Link>
-            <Link className="navMenuItem" style={{color: `${props.textColor}`}} to="/trending">
+            <Link className="navMenuItem" style={{color: `${props.textColor}`}} to="/mv">
                 <div>
-                    {/* <img className="navMenuIcon" src={trending} alt="Trending icon"/> */}
-                    <span id="navMenuIcon" className="material-symbols-outlined">slideshow</span>
+                     <img className="navMenuIcon" src={mv} alt="MVs"/>
                         <span className="navMenuText">
                             Music Videos
                         </span>
                 </div>
             </Link>
-            <Link className="navMenuItem" style={{color: `${props.textColor}`}} to="/topcharts">
-                <div>
-                    {/* <img className="navMenuIcon" src={top} alt="Top Charts icon"/> */}
-                    <span id="navMenuIcon" className="material-symbols-outlined">whatshot</span>
-                        <span className="navMenuText">
-                            Top Charts
-                        </span>
-                </div>
-            </Link>
             <Link className="navMenuItem" style={{color: `${props.textColor}`}} to="/mylibrary">
                 <div>
-                    {/* <img className="navMenuIcon" src={library} alt="Your Library icon"/> */}
-                    <span id="navMenuIcon" className="material-symbols-outlined">library_music</span>
+                     <img className="navMenuIcon" src={library} alt="Your Library icon"/>
                         <span className="navMenuText">
                             My Library
                         </span>

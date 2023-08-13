@@ -6,501 +6,518 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  z-index: 3;
+  z-index: 0;
+  /* background: #381a6b; */
+  /* background-color: #f00; */
+  /* background-image: linear-gradient(5deg, #3d2070 0%, #06000f 70%); */
+  /* background-image: linear-gradient(to left, #000, #222, #000); */
+  /* background-repeat: no-repeat; */
+  /* border-top-left-radius: 60px;
+  border-top-right-radius: 60px; */
 }
-#nextButton, #prevButton {
-    transition: .4s;
+#bottomBG {
+  background-image: url("https://c.saavncdn.com/720/As-It-Was-English-2022-20220401035858-500x500.jpg");
+  background-position: 50%;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  filter: blur(4px);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+  display: none;
+}
+#musicControls {
+  position: absolute;
 }
 #musicComponent {
   margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #musicComponent > img {
   margin: 10px;
-  transition: .3s;
+  transition: 0.3s;
   /* padding: 10px; */
 }
+#playPause {
+  width: 28px;
+}
+#nextButton,
+#prevButton {
+  transition: 0.4s;
+  width: 22px;
+}
+#repeatButton,
+#shuffleButton {
+  width: 20px;
+}
 #musicComponent > img:hover {
-    transform: scale(1.1);
-    cursor: pointer;
+  transform: scale(1.1);
+  cursor: pointer;
 }
 #musicInfo {
-    font-size: 20px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    display: flex;
-    flex-direction: row;
+  font-size: 20px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: -40px;
+  display: flex;
+  flex-direction: row;
+  color: #fff;
 }
 #musicArt {
-    height: 150px;
-    width: 150px;
-    margin-left: 5px;
-    border-radius: 100px;
-    z-index: 3;
-    /* border: 2px solid; */
+  height: 220px;
+  width: 220px;
+  margin-top: -100px;
+  margin-left: 24px;
+  border-radius: 25px;
+  box-shadow: 0 0 10px #555;
 }
 #musicArt:hover {
-    cursor: pointer;
-    border-radius: 10px;
+  cursor: pointer;
+  border-radius: 6px;
+  transform: scale(1.05);
+  margin-top: -90px;
 }
 #songInfo {
-    position: relative;
-    left: 15px;
-    top: 70px;
-    width: 100%;
+  position: relative;
+  left: 30px;
+  top: 62px;
+  width: 100%;
 }
 #songTitle {
-    text-shadow: 0 0 10px #777;
+  text-shadow: 0 0 10px #777;
+}
+#songTitle > span {
+  font-family: 'Josefin Sans', sans-serif;
 }
 #songArtist {
-    font-size: 17px;
-    color: #8b42ff;
-    text-shadow: 0 0 7px #aa76ff;
+  margin-top: 4px;
+  font-size: 17px;
+  color: #8f49ff;
+  font-family: 'Josefin Sans', sans-serif;
+  text-shadow: 0 0 7px #242424;
 }
 #songArtist:hover {
-    /* border-bottom: 1px solid; */
-    text-decoration: underline;
-    cursor: pointer;
+  /* border-bottom: 1px solid; */
+  text-decoration: underline;
+  cursor: pointer;
 }
 #playerLoading {
-    height: 50px;
-    width: 50px;
-    margin-top: 20px;
-    background: #8b42ff;
-    opacity: .2;
-    animation-name: loading;
-    animation-duration: .7s;
-    animation-iteration-count: infinite;
-        transform: scale(.2);
+  height: 50px;
+  width: 50px;
+  margin-top: 20px;
+  background: #8b42ff;
+  opacity: 0.2;
+  animation-name: loading;
+  animation-duration: 0.7s;
+  animation-iteration-count: infinite;
+  transform: scale(0.2);
 }
 @keyframes loading {
-    50% {
-        opacity: .7;
-        transform: scale(1);
-        border-radius: 25px;
-    }
+  50% {
+    opacity: 0.7;
+    transform: scale(1);
+    border-radius: 25px;
+  }
 }
 #totalSeek {
-    width: 95.8%;
-    left: 4.2%;
-    height: 7px;
-    position: fixed;
-    bottom: -2px;
-    z-index: 2;
-    transition: .2s;
+  width: 86%;
+  left: 14%;
+  height: 7px;
+  position: fixed;
+  bottom: 0;
+  z-index: 2;
+  transition: 0.2s;
 }
 #seekBar {
-    -webkit-appearance: none;
-    position: relative;
-    bottom: 10px;
-    width: 100%;
-    height: 100%;
-    transition: .4s;
-    border-radius: 4px;
-    overflow: hidden;
+  -webkit-appearance: none;
+  position: relative;
+  bottom: 10px;
+  width: 100%;
+  height: 100%;
+  transition: 0.4s;
+  overflow: hidden;
+  background-color: #333;
+  border-radius: 30px;
 }
-#seekBar::-webkit-slider-thumb{
-    -webkit-appearance: none;
-    user-select: none;
-    height: 20px;
-    width: 0px;
-    border-radius: 20px;
-    background: #000;
-    box-shadow: -100vw 0 0 100vw #8b42ff;
+#seekBar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  user-select: none;
+  height: 20px;
+  width: 0px;
+  background: #000;
+  box-shadow: -100vw 0 0 100vw #8b42ff;
 }
 #seekBar:hover {
-    cursor: pointer;
-    height: 10px;
+  cursor: pointer;
+  height: 10px;
 }
 #musicDuration {
-    display: flex;
+  display: flex;
 }
 #duration {
-    position: fixed;
-    right: 35px;
-    bottom: 42px;
+  position: fixed;
+  right: 35px;
+  bottom: 42px;
+  color: #fff;
 }
 #duration > span {
-    font-family: 'Montserrat', sans-serif;
-    text-shadow: 0 0 10px #777;
+  font-family: "Montserrat", sans-serif;
+  text-shadow: 0 0 10px #777;
 }
 #bottomIcons {
-    position: fixed;
-    bottom: 34px;
-    right: 130px;
+  position: fixed;
+  bottom: 35px;
+  right: 14.5%;
+}
+#bottomIcons > img {
+  width: 25px;
 }
 #volumeSlider {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background-color: #dadada;
-    border-radius: 20px;
-    position: fixed;
-    bottom: 16.5%;
-    right: 6.3%;
-    transform: rotate(-90deg);
-    overflow: hidden;
-    transition: .4s;
-    box-shadow: 0 0 10px #8b42ff;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #333;
+  border-radius: 20px;
+  position: fixed;
+  bottom: 4.5%;
+  right: 7.8%;
+  overflow: hidden;
+  transition: 0.4s;
 }
 #volumeSlider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background-color: #8b42ff;
-    box-shadow: -100vw 0 0 100vw #8b42ff;
-    height: 20px;
-    width: 20px;
-    border-radius: 20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #8b42ff;
+  box-shadow: -100vw 0 0 100vw #8b42ff;
+  height: 10px;
+  width: 20px;
+  border-radius: 20px;
 }
 #volumeSlider:hover {
-    transform: rotate(-90deg) scale(1.1);
-    cursor: pointer;
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: 0 0 7px #8b42ff;
 }
 #volumeButton {
-    transition: .3s;
-    position: relative;
-    right: 22%;
+  transition: 0.3s;
+  position: relative;
+  right: 22%;
 }
 #volumeButton:hover {
-    cursor: pointer;
-    transform: scale(1.1);
+  cursor: pointer;
+  transform: scale(1.1);
 }
 #bottomMenu {
-    transition: .3s;
-    position: relative;
-    right: 25%;
+  transition: 0.3s;
+  position: relative;
+  right: 25%;
 }
 #bottomMenu:hover {
-    cursor: pointer;
-    transform: scale(1.1);
+  cursor: pointer;
+  transform: scale(1.1);
 }
 #favButton {
-    transition: .3s;
-    transform: scale(0.95);
-    position: relative;
-    right: 28%;
+  transition: 0.3s;
+  transform: scale(0.95);
+  position: relative;
+  right: 28%;
 }
 #favButton:hover {
-    cursor: pointer;
-    transform: scale(1.05);
+  cursor: pointer;
+  transform: scale(1.05);
 }
 #bottomMenuBox {
-    position: absolute;
-    top: -180%;
-    right: 8%;
-    border-radius: 15px;
+  position: absolute;
+  top: -180%;
+  right: 8%;
+  border-radius: 15px;
 }
-.bottomMenuItem, .qualityMenuItem {
-    padding: 15px 20px;
+.bottomMenuItem,
+.qualityMenuItem {
+  padding: 15px 20px;
 }
-.bottomMenuItem:hover, .qualityMenuItem:hover {
-    background: #a5a5a52a !important;
-    cursor: pointer;
+.bottomMenuItem:hover,
+.qualityMenuItem:hover {
+  background: #a5a5a52a !important;
+  cursor: pointer;
 }
 div > #qualityText {
-    position: absolute;
-    top: 17px;
-    left: 35px;
+  position: absolute;
+  top: 17px;
+  left: 35px;
 }
 #chevronLeft {
-    position: relative;
-    top: 0px;
-    right: 8px;
+  position: relative;
+  top: 0px;
+  right: 8px;
 }
 #qualityMenu {
-    position: absolute;
-    left: -205px;
-    top: -50px;
-    border-radius: 15px;
-    background: #eee;
-    box-shadow: 0 0 10px #777;
-    overflow: hidden;
+  position: absolute;
+  left: -205px;
+  top: -50px;
+  border-radius: 15px;
+  background: #111;
+  box-shadow: 0 0 10px #777;
+  overflow: hidden;
 }
 #qualityOption {
-    font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 #selectedQuality {
-    background: #ddd;
+  background: #ddd;
 }
 .qualityMenuItem {
-    display: flex;
-    font-family: 'Montserrat', sans-serif;
+  display: flex;
+  font-family: "Montserrat", sans-serif;
 }
 #qualitySetting {
-    margin-top: 3px;
-    margin-left: 2px;
+  margin-top: 3px;
+  margin-left: 2px;
 }
 #downloadButton {
-    width: 28px;
-    position: relative;
-    right: 36%;
+  width: 28px;
+  position: relative;
+  right: 36%;
 }
 #downloadButton:hover {
-    cursor: pointer;
-    transform: scale(1.1);
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 #bottomNav {
-    position: fixed;
-    bottom: 0;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 3;
-    /* margin-top: 2px; */
-    width: 96.5%;
-    height: 35px;
-    padding: 10px;
-    padding-right: 20px;
-    /* border-right: 2px solid #c4c4c4; */
-    box-shadow: 0 0 3px #777;
-    /* border-top-left-radius: 30px;
-    border-top-right-radius: 30px; */
-    /* border-bottom-right-radius: 30px; */
-    overflow: hidden;
-    position: fixed;
-    background: #fff;
-    -webkit-touch-callout: none;
-      -webkit-user-select: none;
-       -khtml-user-select: none;
-         -moz-user-select: none;
-          -ms-user-select: none;
-              user-select: none;
-  }
-  #bottomNavMenu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 8px;
-
-  }
-  #bottomNavMenuTitle {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-  .bottomNavMenuItem {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0vw;
-    font-size: 20px;
-    margin-top: 10px;
-    padding: 10px;
-    transition: .1s;
-    width: 150px;
-  }
-  #bottomNavMenuIcon {
-    font-size: 25px;
-  }
-  .bottomNavMenuItem:hover {
-    background: #a5a5a52a;
-    cursor: pointer;
-    border-radius: 10px;
-  }
-  .bottomNavMenuText {
-    font-size: 15px;
-    display: flex;
-      margin-left: 4px;
-  }
-  #bottomNav > hr {
-    margin-top: 20px;
-    margin-bottom: 10px;
-  }
-  #active {
-      background: rgba(165, 165, 165, 0.164);
-      cursor: pointer;
-      border-radius: 10px;
-      border-bottom: 2px solid #8b42ff;
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  position: fixed;
+  bottom: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  width: 96.5%;
+  height: 35px;
+  padding: 10px;
+  padding-right: 20px;
+  box-shadow: 0 0 3px #777;
+  overflow: hidden;
+  position: fixed;
+  background: #111;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#bottomNavMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 8px;
+}
+#bottomNavMenuTitle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.bottomNavMenuItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0vw;
+  font-size: 20px;
+  margin-top: 10px;
+  padding: 10px;
+  transition: 0.1s;
+  width: 150px;
+}
+#bottomNavMenuIcon {
+  font-size: 25px;
+}
+.bottomNavMenuItem:hover {
+  background: #a5a5a52a;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.bottomNavMenuText {
+  font-size: 15px;
+  display: flex;
+  margin-left: 4px;
+}
+#bottomNav > hr {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+#active {
+  background: rgba(165, 165, 165, 0.164);
+  cursor: pointer;
+  border-radius: 10px;
+  border-bottom: 2px solid #8b42ff;
+}
 
 @media only screen and (max-width: 1050px) {
-    #musicComponent {
-        position: absolute;
-        top: -3px;
-        right: 0px;
-    }
-    #musicComponent > img {
-        width: 25px;
-    }
-    #bottomIcons {
-        bottom: 28px;
-    }
-    #favButton, #bottomMenu, #volumeButton, #downloadButton {
-        display: none;
-    }
-    #songInfo {
-        top: 54px;
-    }
-    #songTitle {
-        font-size: 17px;
-    }
-    #songArtist {
-        margin-top: 3px;
-        font-size: 14px;
-    }
-    #musicArt {
-        width: 120px;
-        height: 120px;
-    }
-    #bottomBar {
-        height: 85px;
-    }
-    #duration {
-        display: none;
-    }
+  #musicComponent {
+    position: absolute;
+    top: -3px;
+    right: 0px;
+  }
+  #musicComponent > img {
+    width: 25px;
+  }
+  #bottomIcons {
+    bottom: 28px;
+  }
+  #favButton,
+  #bottomMenu,
+  #volumeButton,
+  #downloadButton {
+    display: none;
+  }
+  #songInfo {
+    top: 54px;
+  }
+  #songTitle {
+    font-size: 17px;
+  }
+  #songArtist {
+    margin-top: 3px;
+    font-size: 14px;
+  }
+  #musicArt {
+    width: 120px;
+    height: 120px;
+  }
+  #bottomBar {
+    height: 85px;
+  }
+  #duration {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 750px) {
-    #bottomNav {
-        display: flex;
-    }
-    #bottomBar {
-        bottom: 54px;
-    }
-    #totalSeek {
-        bottom: 54px;
-        width: 91%;
-        left: 9%;
-    }
+  #bottomNav {
+    display: flex;
+  }
+  #bottomBar {
+    bottom: 54px;
+  }
+  #totalSeek {
+    bottom: 54px;
+    width: 91%;
+    left: 9%;
+  }
 }
 
 @media only screen and (max-width: 650px) {
-    .bottomNavMenuItem {
-        width: 100px;
-        margin-left: 10px;
-        margin-right: 10px;
-    }
+  .bottomNavMenuItem {
+    width: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
-    #bottomBar {
-        bottom: 50px;
-    }
-    #totalSeek {
-        bottom: 49px;
-        width: 91%;
-        left: 9%;
-    }
-    #bottomNav {
-        height: 30px;
-    }
-    .bottomNavMenuItem {
-        width: 100px;
-        margin-left: 10px;
-        margin-right: 10px;
-        font-size: 15px;
-    }
-    #bottomNavMenuIcon {
-        font-size: 20px;
-    }
-    #songInfo {
-        top: 65px;
-    }
-    #songTitle {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 200px;
-        height: 15px;
-        font-size: 17px;
-    }
-    #songArtist {
-        width: 100px;
-        height: 12px;
-        display: flex;
-        flex-direction: column;
-        font-size: 12px;
-    }
+  #bottomBar {
+    bottom: 50px;
+  }
+  #totalSeek {
+    bottom: 49px;
+    width: 91%;
+    left: 9%;
+  }
+  #bottomNav {
+    height: 30px;
+  }
+  .bottomNavMenuItem {
+    width: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 15px;
+  }
+  #bottomNavMenuIcon {
+    font-size: 20px;
+  }
+  #songInfo {
+    top: 65px;
+  }
+  #songTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 200px;
+    height: 15px;
+    font-size: 17px;
+  }
+  #songArtist {
+    width: 100px;
+    height: 12px;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+  }
 }
 
 @media only screen and (max-width: 550px) {
-    .bottomNavMenuItem {
-        margin-left: 5px;
-        margin-right: 5px;
-    }
-    #songInfo {
-        top: 55px;
-    }
-    #songTitle {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 150px;
-        height: 15px;
-        font-size: 17px;
-        margin-top: -2px;
-    }
-    #songArtist {
-        width: 100px;
-        height: 12px;
-        display: flex;
-        flex-direction: column;
-        font-size: 12px;
-    }
-    #musicArt {
-        width: 100px;
-        height: 100px;
-    }
-    #musicComponent > img {
-        width: 20px;
-    }
-    #musicComponent {
-        margin: 15px;
-        margin-right: 7px;
-    }
-    #bottomBar {
-        height: 70px;
-    }
+  .bottomNavMenuItem {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  #songInfo {
+    top: 55px;
+  }
+  #songTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 150px;
+    height: 15px;
+    font-size: 17px;
+    margin-top: -2px;
+  }
+  #songArtist {
+    width: 100px;
+    height: 12px;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+  }
+  #musicArt {
+    width: 100px;
+    height: 100px;
+  }
+  #musicComponent > img {
+    width: 20px;
+  }
+  #musicComponent {
+    margin: 15px;
+    margin-right: 7px;
+  }
+  #bottomBar {
+    height: 70px;
+  }
 }
 @media only screen and (max-width: 500px) {
-    #bottomNav {
-        width: 99%;
-        margin-left: -7px;
-    }
-    #bottomNavMenuTitle {
-        flex-direction: column;
-    }
-    .bottomNavMenuItem {
-        padding: 4px;
-        width: 70px;
-    }
-    .bottomNavMenuText {
-        font-size: 12px;
-        margin: 0;
-    }
-    #totalSeek {
-        height: 5px;
-        width: 86%;
-        left: 14%;
-    }
+  #bottomNav {
+    width: 99%;
+    margin-left: -7px;
+  }
+  #bottomNavMenuTitle {
+    flex-direction: column;
+  }
+  .bottomNavMenuItem {
+    padding: 4px;
+    width: 70px;
+  }
+  .bottomNavMenuText {
+    font-size: 12px;
+    margin: 0;
+  }
+  #totalSeek {
+    height: 5px;
+    width: 86%;
+    left: 14%;
+  }
 }

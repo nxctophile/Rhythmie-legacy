@@ -1,83 +1,197 @@
 #homePage {
     overflow: scroll;
     overflow-x: hidden;
-    height: 90vh;
     width: 85vw;
-    margin-left: 15vw;
-    z-index: 0;
+    z-index: 3;
     display: flex;
     justify-content: center;
+    background-image: linear-gradient(to bottom, #11052C, #050505, #050505, #050505, #050505);
 }
 #content {
-    margin-top: 10vh;
+    margin-top: 12vh;
 }
 #greeting {
-    font-size: 45px;
-    margin-bottom: 35px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 28px;
+    margin-bottom: 40px;
 }
-#sectionTitle {
-    font-size: 30px;
-    text-align: center;
-    margin-bottom: 30px;
+#username {
+    margin-top: 17px;
+    display: flex;
+    align-items: center;
+}
+#usernameField, #usernameInput {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 60px;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+}
+#usernameInput {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #6f16ff;
+    caret-color: #fff;
+    display: none;
+}
+#usernameInput::placeholder {
+    color: transparent;
+    -webkit-text-stroke: 1px #aaa;
+}
+#username:hover > #editUsername {
+    opacity: 1;
+}
+#editUsername {
+    margin-left: 15px;
+    opacity: 0;
+}
+#editUsername:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+#lastPlayed {
+    height: 150px;
+    width: 620px;
+    border-radius: 40px;
+    margin-top: 20px;
+    margin-right: 20px;
+    background: #171717;
+}
+#lastPlayedSectionTitle {
+    font-size: 18px;
+    margin-left: 5px;
+}
+#likedSongs {
+    height: 150px;
+    width: 620px;
+    border-radius: 40px;
+    margin-top: 40px;
+    margin-right: 20px;
+    background: #171717;
 }
 
+#secondaryHomeSection {
+    display: inline-flex;
+    margin-bottom: 20px;
+}
+#lastPlayed {
+    display: flex;
+    align-items: center;
+    padding-top: 5px;
+}
+
+#lastPlayed:hover, #likedSongs:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px #222;
+    cursor: pointer;
+}
+
+#playButtonEffectContainer {
+    position: relative;
+}
+
+#lastPlayedArt > img {
+    width: 115px;
+    border-radius: 30px;
+    margin-left: 20px;
+    background: #0a0a0a;
+}
+#lastPlayedDetails, #likedSongsDetails {
+    margin-left: 20px;
+    width: 405px;
+    /*background: #6f16ff;*/
+}
+#lastPlayedTitle, #likedSongsTitle {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 25px;
+    margin-bottom: 7px;
+}
+#lastPlayedArtist, #likedSongsNumber {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #6f16ff;
+    font-size: 18px;
+}
 #homeCardContainer {
     display: grid;
     gap: 20px;
     grid-template-columns: 250px 250px 250px 250px 250px;
-    grid-template-rows: 280px 280px 280px 280px;
+    grid-template-rows: 280px 280px 280px;
 }
 #homeCardImg {
     height: 200px;
     width: 200px;
-    border-radius: 20px;
     transition: .4s;
+    border-radius: 20px;
+}
+#likedSongs {
+    display: flex;
+    align-items: center;
+}
+#heartIcon {
+    margin-left: 20px;
+    background: #0a0a0a;
+    padding: 25px;
+    border-radius: 30px;
 }
 .homeCard {
     height: 200px;
     width: 200px;
     text-align: center;
+    border-radius: 20px;
 }
 .homeCard:hover {
     cursor: pointer;
-    transform: scale(1.05);
+    transform: scale(1.04);
+    box-shadow: 0 0 30px #310087;
 }
 #homePageTitleContainer {
     font-size: 25px;
-    text-align: center;
     display: flex;
-    justify-content: center;
-    margin: 40px;
+    margin: 20px 5px;
 }
 #homePageTitle {
-    border-bottom: 1px solid;
+    font-family: 'Josefin Sans', sans-serif;
     padding-bottom: 10px;
     width: 200px;
 }
 #exploreMoreHomeContainer {
-    font-size: 25px;
+    font-size: 22px;
     text-align: center;
     display: flex;
     justify-content: center;
-    /* margin: 10px; */
     padding-bottom: 40px;
 }
 #exploreMoreHome {
-    padding-top: 20px;
+    padding-top: 10px;
     width: 400px;
 }
+#homeSeparatorContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#homeSeparator {
+    width: 130px;
+    height: 5px;
+    background: #ddd;
+    border-radius: 20px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
 #fireEmoji {
     height: 25px;
 }
 #handWaveEmoji {
-    height: 45px;
-    margin-left: 10px;
+    height: 30px;
+    padding-left: 8px;
+    /*display: none;*/
 }
 #exploreMoreHome:hover {
     color: #8D3EFF;
 }
 #homeCardTitle {
-    font-size: 17px;
+    margin-top: 5px;
+    font-size: 15px;
 }
 @media only screen and (max-width: 1740px) {
     #homePage {

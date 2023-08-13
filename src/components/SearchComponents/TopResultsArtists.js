@@ -6,13 +6,14 @@ import dots from '../../resources/dots.png';
 import play from '../../resources/play.png';
 
 function TopResults(props) {
+    console.log(props.artistProfile);
   return (
     <div style={{background: `${props.boxColor}`}} className="searchResults">
         {props.musicArt && 
             <img id="searchedMusicArt" src={props.artistProfile} alt={defaultImg} />
         }
         {!props.musicArt && 
-            <img id="searchedMusicArt" src={defaultImg} alt={defaultImg} />
+            <img id="searchedMusicArt" src={props.artistProfile} alt={defaultImg} />
         }
         <div id="searchedSongInfo">
             <div id="actualInfo">
