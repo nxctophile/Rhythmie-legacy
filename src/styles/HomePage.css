@@ -1,0 +1,191 @@
+#homePage {
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 90vh;
+    width: 85vw;
+    margin-left: 15vw;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+}
+#content {
+    margin-top: 10vh;
+}
+#greeting {
+    font-size: 45px;
+    margin-bottom: 35px;
+}
+#sectionTitle {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#homeCardContainer {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 250px 250px 250px 250px 250px;
+    grid-template-rows: 280px 280px 280px 280px;
+}
+#homeCardImg {
+    height: 200px;
+    width: 200px;
+    border-radius: 20px;
+    transition: .4s;
+}
+.homeCard {
+    height: 200px;
+    width: 200px;
+    text-align: center;
+}
+.homeCard:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+#homePageTitleContainer {
+    font-size: 25px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+}
+#homePageTitle {
+    border-bottom: 1px solid;
+    padding-bottom: 10px;
+    width: 200px;
+}
+#exploreMoreHomeContainer {
+    font-size: 25px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    /* margin: 10px; */
+    padding-bottom: 40px;
+}
+#exploreMoreHome {
+    padding-top: 20px;
+    width: 400px;
+}
+#fireEmoji {
+    height: 25px;
+}
+#handWaveEmoji {
+    height: 45px;
+    margin-left: 10px;
+}
+#exploreMoreHome:hover {
+    color: #8D3EFF;
+}
+#homeCardTitle {
+    font-size: 17px;
+}
+@media only screen and (max-width: 1740px) {
+    #homePage {
+        margin-top: 30px;
+        width: 86%;
+        margin-left: 14vw;
+    }
+    #homeCardContainer {
+        grid-template-columns: 250px 250px 250px 250px;
+        grid-template-rows: 280px 280px 280px 280px 280px;
+    }
+}
+@media only screen and (max-width: 1500px) {
+    #homeCardContainer {
+        grid-template-columns: 250px 250px 250px;
+        grid-template-rows: 280px 280px 280px 280px 280px 280px 280px;
+    }
+}
+@media only screen and (max-width: 1400px) {
+    #homePage {
+        width: 92%;
+        margin-left: 110px;
+    }
+    #homeCardContainer {
+        grid-template-columns: 250px 250px 250px 250px;
+        grid-template-rows: 280px 280px 280px 280px 280px;
+    }
+}
+@media only screen and (max-width: 1170px) {
+    #homePage {
+        width: 92%;
+        margin-left: 110px;
+    }
+    #homeCardContainer {
+        grid-template-columns: 250px 250px 250px;
+        grid-template-rows: 280px 280px 280px 280px 280px;
+    }
+}
+@media only screen and (max-width: 880px) {
+    #greeting{
+        text-align: center;
+        font-weight: bold;
+    }
+    #homePage {
+        width: 92%;
+        margin-left: 70px;
+    }
+    #homeCardImg, .homeCard {
+        height: 150px;
+        width: 150px;
+    }
+    #homeCardContainer {
+        grid-template-columns: 200px 200px 200px;
+        grid-template-rows: 200px 200px 200px 200px 200px;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    #homePage {
+        margin-left: 0;
+        width: 100%;
+    }
+    #exploreMoreHome {
+        margin-bottom: 35px;
+    }
+    #homeCardImg, .homeCard {
+        height: 110px;
+        width: 110px;
+    }
+    #homeCardTitle {
+        font-size: 14px;
+    }
+    #homePageTitle {
+        font-size: 16px;
+        width: 140px;
+    }
+    #homeCardContainer {
+        grid-template-columns: 170px 170px 170px;
+        grid-template-rows: 200px 200px 200px 200px 200px;
+        margin-left: 20px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    #greeting{
+        font-size: 30px;
+    }
+    #homeCardTitle {
+        margin-top: 5px;
+        font-size: 12px;
+    }
+    #homeCardImg, .homeCard {
+        height: 90px;
+        width: 90px;
+        border-radius: 12px;
+    }
+    #homeCardContainer {
+        grid-template-columns: 100px 100px 100px;
+        grid-template-rows: 125px 125px 125px 125px 125px;
+        margin-left: 30px;
+    }
+    #exploreMoreHomeContainer {
+        padding-bottom: 100px;
+    }
+}
+@media only screen and (max-width: 440px) {
+    #homeCardTitle {
+        margin-top: 5px;
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,138 @@
+#sideNav {
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  z-index: 3;
+  /* margin-top: 2px; */
+  width: 245px;
+  height: 100%;
+  padding: 10px;
+  padding-right: 20px;
+  /* border-right: 2px solid #c4c4c4; */
+  box-shadow: 0 0 7px #777;
+  border-top-right-radius: 30px;
+  /* border-bottom-right-radius: 30px; */
+  overflow: hidden;
+  position: fixed;
+  background: #fff;
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+#barTitle {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  padding-bottom: 10px;
+  border-bottom: 1px solid;
+  margin-bottom: 10px;
+}
+#icon {
+  width: 40px;
+}
+#barTitleText {
+  font-size: 26px;
+  margin-left: 10px;
+  font-weight: bold;
+}
+.navMenuItem {
+  font-size: 20px;
+  margin-top: 10px;
+  padding: 10px;
+  transition: .1s;
+  display: flex;
+  flex-direction: column;
+  margin-left: 2px;
+}
+#navMenuIcon {
+  font-size: 30px;
+}
+.navMenuItem:hover {
+  background: #a5a5a52a;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.navMenuText {
+  margin-left: 10px;
+  position: relative;
+  top: -6px;
+}
+nav > hr {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+#playQueueTitle {
+  font-size: 17px;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+#createQueueButton {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-left: 10px;
+  padding: 10px;
+  background: transparent;
+  border-style: solid;
+  border-radius: 10px;
+  transition: .2s;
+}
+#createQueueButton:hover {
+  cursor: pointer;
+  background: rgba(165, 165, 165, 0.164);
+  transform: translateX(20px);
+}
+#active {
+    background: rgba(165, 165, 165, 0.164);
+    cursor: pointer;
+    border-radius: 10px;
+    border-bottom: 2px solid #8b42ff;
+}
+#titleTextContainer {
+  display: flex;
+}
+#alpha {
+  color: #8d3eff;
+  font-size: 12px;
+  border: 1px solid;
+  padding: 6px;
+  margin-left: 10px;
+  font-weight: bold;
+  border-radius: 20px;
+}
+@media only screen and (max-width: 1400px) {
+  #sideNav {
+    width: 35px;
+    display: flex;
+    align-items: center;
+  }
+  #barTitleText {
+    display: none;
+  }
+  #alpha {
+    display: none;
+  }
+  .navMenuText {
+    display: none;
+  }
+  #playQueueTitle {
+    display: none;
+  }
+  #createQueueButton {
+    display: none;
+  }
+  .navMenuItem {
+  margin-left: 10px;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  #sideNav {
+    display: none;
+  }
+}

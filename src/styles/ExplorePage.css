@@ -1,0 +1,426 @@
+#explorePage {
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 90vh;
+    width: 85vw;
+    margin-left: 15vw;
+    z-index: 0;
+}
+#explorePageContents {
+    height: 100%;
+    width: 100%;
+    margin-top: 8vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.searchResults{
+    height: 50px;
+    width: 80%;
+    margin: 20px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    transition: .4s;
+}
+.topSearchResults {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#searchedMusicArt {
+    margin-left: 5px;
+    height: 50px;
+    width: 50px;
+    border-radius: 100px;
+    box-shadow: 0 0 5px #777;
+}
+
+
+/* 
+.topSearchResult{
+    height: 100px;
+    width: 40%;
+    margin: 20px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    transition: .4s;
+}
+.topSearchResult:hover {
+    transform: scale(1.05);
+}
+#topIcons {
+    display: flex;
+    align-items: center;
+    position: relative;
+    right: 158%;
+    width: 0vw;
+}
+#topMusicArt {
+    height: 80px;
+    width: 80px;
+    border-radius: 100px;
+    box-shadow: 0 0 5px #777;
+}
+#topSongInfo {
+    margin-left: 15px;
+    font-size: 20px;
+}
+#topSongTitle {
+    font-size: 25px;
+    width: 100vw;
+    
+}
+#topSongArtist {
+    margin-top: 2px;
+    color: #8b42ff;   
+} */
+
+
+#searchedSongInfo {
+    margin-left: 15px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+}
+#searchedSongTitle {
+    font-size: 17px;
+    width: 450px;
+}
+#searchedSongArtist {
+    margin-top: 3px;
+    color: #8b42ff;   
+}
+#actualInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#searchedIcons {
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: -16%;
+    height: 100px;
+    width: 100px;
+}
+#searchedAlbumIcons {
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: -10%;
+    height: 100px;
+    width: 100px;
+}
+#searchedArtistIcons {
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: -10%;
+    height: 100px;
+    width: 100px;
+}
+.searchedIcons {
+    margin-left: 7.5px;
+    width: 21px;
+}
+#downloadSearchButton {
+    width: 24px;
+    margin-left: 7px;
+}
+#totalMusicDuration {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    margin-right: 15px;
+}
+#searchedPlayButton {
+    margin-right: 5px;
+}
+#seeMore {
+    font-size: 20px;
+    padding: 10px 0;
+    -webkit-touch-callout: none;
+      -webkit-user-select: none;
+       -khtml-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+}
+#searchLoading {
+    height: 100px;
+    width: 100px;
+    background: #8b42ff;
+    opacity: .2;
+    animation-name: searchLoading;
+    animation-duration: .7s;
+    animation-iteration-count: infinite;
+        transform: scale(.2);
+}
+@keyframes searchLoading {
+    50% {
+        opacity: .7;
+        transform: scale(1);
+        border-radius: 55px;
+    }
+}
+#searchLoadingContainer {
+    display: flex;
+    margin-top: 40vh;
+    justify-content: center;
+}
+::-webkit-scrollbar {
+    background: transparent;
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #8b42ff;
+    border-radius: 20px;
+}
+#searchedTitle {
+    font-size: 27px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.searchedMusicTitle {
+    margin: 30px;
+    opacity: .5;
+    padding-bottom: 10px;
+    padding-right: 5px;
+    padding-left: 5px;
+    -webkit-touch-callout: none;
+      -webkit-user-select: none;
+       -khtml-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+}
+#activeMusicTitle {
+    border-bottom: 3px solid;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    opacity: 1;
+    cursor: pointer;
+}
+.topSearchTitle {
+    font-size: 30px;
+    text-align: center;
+}
+#resultsHr, #resultsLastHr {
+    width: 15%;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+#topSearchesContainer {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+#topSearchesText {
+    font-size: 35px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid;
+}
+#topSearch {
+    padding: 15px 0;
+    font-size: 20px;
+}
+#topSearchesIcon {
+    padding-top: 15px;
+    padding-right: 10px;
+}
+#topSearches {
+    display: flex;
+    transition: .1s;
+}
+#topSearchesIcon {
+    height: 35px;
+    margin-left: 10px;
+}
+#searchBack {
+    font-size: 25px;
+}
+#mostRecentSearch {
+    font-size: 20px;
+    opacity: .5;
+    display: flex;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+#mostRecentSearchIcon {
+    margin-right: 5px;
+}
+
+#exploreSearchBar {
+    margin: 12px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 10vh;
+    margin-bottom: -8vh;
+    flex-direction: row;
+}
+#exploreSearchBox {
+    padding: 7px;
+    padding-left: 15px;
+    width: 70%;
+    font-size: 17px;
+    outline: none;
+    border-radius: 20px;
+    border-style: solid;
+}
+#exploreSearchBox:focus {
+    box-shadow: 0 0 10px #8b42ff;
+}
+/*#exploreSearchButton {*/
+/*    margin-left: -17px;*/
+/*    padding: 9px;*/
+/*    font-size: 15px;*/
+/*    font-weight: 600;*/
+/*    border: 2px solid #5a00eb;*/
+/*    border-radius: 20px;*/
+/*    border-style: solid;*/
+/*    background: #8b42ff;*/
+/*    color: #fff;*/
+/*    transition: .2s;*/
+/*    -webkit-touch-callout: none;*/
+/*        -webkit-user-select: none;*/
+/*        -khtml-user-select: none;*/
+/*            -moz-user-select: none;*/
+/*            -ms-user-select: none;*/
+/*                user-select: none;*/
+/*    display: none;*/
+/*}*/
+/*#exploreSearchButton:hover {*/
+/*    cursor: pointer;*/
+/*    background: #6f16ff;*/
+/*}*/
+
+/* @media only screen and (max-width: 900px) {
+    #exploreSearchBar {
+        display: flex;
+    }
+} */
+
+@media (hover:hover) {
+    .searchResults:hover {
+        transform: scale(1.05);
+    }
+    .searchedIcons:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+    #seeMore:hover {
+        color: #8b42ff;
+        cursor: pointer;
+    }
+    #activeMusicTitle:hover {
+        cursor: default;
+    }
+    .searchedMusicTitle:hover {
+        opacity: 1;
+        cursor: pointer;
+    }
+    #topSearches:hover {
+        cursor: pointer;
+        color: #8d3eff;
+    }
+    #searchBack:hover {
+        cursor: pointer;
+    }
+    #mostRecentSearch:hover {
+        text-decoration: underline;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    #explorePage {
+        margin-left: 15vw;
+    }
+}
+@media only screen and (max-width: 750px) {
+    #exploreSearchBar {
+        display: flex;
+        width: 100%;
+        margin-left: 20px;
+    }
+    #explorePage {
+        margin-left: 0px;
+        width: 100%;
+    }
+    #topSearchesText {
+        font-size: 25px;
+    }
+    #topSearchesIcon {
+        height: 25px;
+    }
+    #topSearchesContainer {
+        margin-top: 30px;
+    }
+    #topSearch {
+        font-size: 17px;
+    }
+    #searchedTitle {
+        font-size: 17px;
+    }
+    .searchedMusicTitle {
+        margin: 30px 10px;
+    }
+    #searchBack {
+        font-size: 20px;
+        margin-right: -5px;
+    }
+    .topSearchTitle {
+        font-size: 22px;
+        font-weight: bold;
+    }
+    .searchResults {
+        height: 35px;
+        width: 50%;
+        border-radius: 17px;
+        padding-left: 7px;
+        margin-bottom: 3px;
+    }
+    #searchedSongTitle {
+        font-size: 17px;
+    }
+    #searchedSongInfo {
+        font-size: 12px;
+    }
+    #downloadSearchButton, #searchedFavButton {
+        display: none;
+    }
+    #searchedIcons {
+        left: -43%;
+    }
+    .searchedIcons {
+        margin-left: 5px;
+    }
+    #resultsLastHr {
+        margin-bottom: 115px;
+    }
+    #activeMusicTitle {
+        border-bottom: 2px solid;
+    }
+    /*.topSearchIcons {*/
+    /*    left: -46%;*/
+    /*}*/
+
+}
+@media only screen and (max-width: 400px) {
+    #exploreSearchBox {
+        width: 80%;
+        margin-left: -10px;
+    }
+}
