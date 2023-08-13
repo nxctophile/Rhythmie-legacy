@@ -20,7 +20,7 @@ function Topbar(props) {
     <div style={{background: `${props.theme}`, color: `${props.textColor}`}} id="topBar">
 
     <div id="topbarTextContainer">
-            <img id="barIcon" src={icon} alt="ApidMusic icon"/>
+            <img id="barIcon" src={icon} alt="Rhythmie icon"/>
                 <div id="topbarText">
                     Rhythmie
                 </div>
@@ -39,7 +39,9 @@ function Topbar(props) {
             </button>
         </div>
         <div id="userAccountPanel">
-            <img src={accountIcon} />
+            <a href="/mylibrary">
+              <img id="accountIcon" src={accountIcon} />
+            </a>
         </div>
     </div>
     </>

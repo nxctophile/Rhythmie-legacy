@@ -89,11 +89,15 @@
   top: 0;
   right: 10px;
 }
-#userAccountPanel > img {
+#userAccountPanel > a {
   position: relative;
   top: 20px;
   right: 20px;
 }
+#accountIcon:hover {
+  transform: scale(1.1);
+}
+
 #userAccountPanel > button:hover {
   cursor: pointer;
   background: #6f16ff;

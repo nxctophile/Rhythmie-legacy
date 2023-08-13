@@ -13,6 +13,7 @@ import "./styles/Sidebar.css";
 import WorkInProgress from "./components/WorkInProgress";
 import BottomNavbar from "./components/BottomNavbar";
 import MVPage from "./components/MVPage";
+import MyLibraryPage from "./components/MyLibraryPage";
 
 let x = 0;
 let interval;
@@ -431,7 +432,7 @@ export default function App() {
           <Route path="/mv/*" element={
             <MVPage />
           }></Route>
-          <Route path="/mylibrary/*" element={<WorkInProgress />}></Route>
+          <Route path="/mylibrary/*" element={<MyLibraryPage />}></Route>
           <Route path="/workinprogress/*" element={<WorkInProgress />}></Route>
         </Routes>
       </div>

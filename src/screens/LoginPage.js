@@ -2,10 +2,10 @@ import React from 'react';
 import noUserPic from '../resources/profile-user.png';
 import '../styles/MyLibraryPage.css';
 
-function MyLibraryPage() {
+function LoginPage() {
   return (
     <>
-    <section id="myLibraryPage">
+    <section id="loginPage">
         <div id="noUserContainer">
             <div id="noUserPicContainer">
                 <img id="noUserPic" src={noUserPic} />
@@ -23,4 +23,4 @@ function MyLibraryPage() {
   )
 }
 
-export default MyLibraryPage;
+export default LoginPage;

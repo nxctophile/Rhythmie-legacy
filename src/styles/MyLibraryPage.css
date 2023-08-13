@@ -1,0 +1,42 @@
+#noUserContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 90vh;
+}
+#noUserPicContainer {
+    margin-bottom: 20px;
+}
+#noUserTextContainer {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+#noUserPic {
+    width: 100px;
+    opacity: .9;
+}
+#buttonContainer {
+    display: flex;
+}
+#buttonContainer > button {
+    height: 50px;
+    width: 150px;
+    /* background: transparent; */
+    border-radius: 17px;
+    border: 2px solid #ddd;
+    font-size: .9rem;
+    margin: 0 14px;
+}
+#loginLibraryButton {
+    background: transparent;
+}
+#createLibraryButton {
+    background: transparent;
+}
+#buttonContainer > button:hover {
+    background: #5b07e2;
+    transform: scale(1.07);
+    cursor: pointer;
+}
