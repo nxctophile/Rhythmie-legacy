@@ -8,15 +8,20 @@ import play from '../../resources/play.png';
 function SearchResults(props) {
   return (
     <div style={{background: `${props.boxColor}`}} className="searchResults">
-        {props.musicArt && 
-            <img id="searchedMusicArt" src={props.musicArt} alt={defaultImg} />
+        {props.musicArt &&
+            <div id="musicArtContainer" onClick={() => {props.playMusic(props.songID)}}>
+                <object id="searchedMusicArt" data={props.musicArt} type="image/png">
+                    <img id="failedMusicArt" src={defaultImg} onError={defaultImg}  alt={''}/>
+                </object>
+                <img draggable={false} id="searchedPlayButton" src={play} alt="" />
+            </div>
         }
         {!props.musicArt && 
-            <img id="searchedMusicArt" src={defaultImg} alt={defaultImg} />
+            <img id="searchedMusicArt" src={defaultImg}  alt={''}/>
         }
         <div id="searchedSongInfo">
             <div id="actualInfo">
-                <div style={{color: props.textColor}} id="searchedSongTitle">{props.songName}</div>
+                <div id="searchedSongTitle">{props.songName}</div>
                 <div id="searchedSongArtist">{props.songArtist}</div>
             </div>
             <div id="searchedIcons">
@@ -25,6 +30,7 @@ function SearchResults(props) {
                 </div>
                 <img onClick={() => {props.playMusic(props.songID)}} id="searchedPlayButton" className="searchedIcons" src={play} alt="" />
                 <img id="searchedFavButton" className="searchedIcons" src={unfav} alt="" />
+                <div id="searchedSongDuration">{props.songDuration}</div>
                 <img id="searchedOptionButton" className="searchedIcons" src={dots} alt="" />
              </div>
         </div>

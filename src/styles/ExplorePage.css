@@ -4,6 +4,7 @@
     height: 90vh;
     width: 85vw;
     z-index: 0;
+    background-image: linear-gradient(to bottom, #1f1f1f, #0f0f0f, #090909, #050505, #050505);
 }
 
 #explorePageContents {
@@ -17,15 +18,19 @@
 
 .searchResults {
     height: 50px;
-    width: 90%;
+    width: 100%;
     display: flex;
     align-items: center;
-    padding: 20px 20px;
+    padding: 12px 12px;
+    margin-bottom: 10px;
     transition: .4s;
-    background: #131313;
-    border-bottom: 5px solid #222;
-    border-radius: 20px;
-    margin-bottom: 20px;
+    border-bottom: 1px solid #151515;
+    border-radius: 14px;
+}
+
+.searchResults:last-child {
+    border-radius: 0 0 26px 26px;
+    background: #8b42ff;
 }
 
 .topSearchResults {
@@ -36,13 +41,84 @@
     border-radius: 200px;
     margin-top: 30px;
 }
+#musicArtContainer, #albumArtContainer {
+    display: grid;
+    align-items: center;
+}
 
 #searchedMusicArt {
     margin-left: 5px;
     height: 55px;
     width: 55px;
+    border-radius: 10px;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#topResultsAlbums {
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    display: grid;
+    /*grid-template-columns: 240px 240px 240px;*/
+    grid-template-columns: 220px 220px 220px 50px;
+    margin-bottom: 60px;
+}
+
+#searchedAlbumArt {
+    height: 180px;
+    width: 180px;
+    background: #171717;
+    border-radius: 20px;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#searchedAlbumTitle {
+    font-size: 18px;
+    margin-top: 12px;
+}
+
+#searchedAlbumArtist {
+    margin-top: 4px;
+    color: #999;
+    font-size: 14px;
+}
+
+#searchedAlbumIcons {
+    position: relative;
+    top: 70px;
+    grid-column: 1;
+    grid-row: 1;
+    opacity: 0;
+}
+#searchedAlbumFavButton {
+    margin-right: 110px;
+}
+
+#searchedArtistArt {
+    margin-left: 5px;
+    height: 55px;
+    width: 55px;
+    border-radius: 30px;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#failedMusicArt {
+    margin-left: -1px;
+    height: 55px;
+    width: 55px;
     border-radius: 12px;
-    box-shadow: 0 0 5px #777;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#searchedPlayButton {
+    width: 22px;
+    grid-column: 1;
+    grid-row: 1;
+    margin-left: 23px;
+    opacity: 0;
 }
 
 #searchedSongInfo {
@@ -59,7 +135,10 @@
 
 #searchedSongArtist {
     margin-top: 4px;
-    color: #8f49ff;
+    /*color: #8f49ff;*/
+    /*color: #7c7c7c;*/
+    color: #999;
+    font-size: 14px;
 }
 
 #actualInfo {
@@ -95,9 +174,34 @@
     width: 100px;
 }
 
+#searchedAlbumPlayButton {
+    width: 32px;
+    grid-column: 1;
+    grid-row: 1;
+    margin-left: 70px;
+    opacity: 0;
+    z-index: 5;
+}
+#moreButton {
+    opacity: .9;
+    margin-top: -40px;
+}
+
+#searchedSongDuration {
+    font-family: "Montserrat", sans-serif;
+    margin-left: 15px;
+    color: #999;
+}
+
 .searchedIcons {
     margin-left: 7.5px;
     width: 21px;
+    /*opacity: 0;*/
+}
+
+.topSearchIcons {
+    margin-left: 110px;
+    margin-right: -80px;
 }
 
 #downloadSearchButton {
@@ -109,10 +213,6 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 17px;
     margin-right: 15px;
-}
-
-#searchedPlayButton {
-    margin-right: 5px;
 }
 
 #seeMore {
@@ -171,41 +271,126 @@
 }
 
 .searchedMusicTitle {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
     margin: 30px;
     opacity: .5;
-    padding-bottom: 10px;
-    padding-right: 5px;
-    padding-left: 5px;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
-    -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    padding: 9px 20px;
 }
 
 #activeMusicTitle {
-    border-bottom: 3px solid;
-    border-bottom-left-radius: 7px;
-    border-bottom-right-radius: 7px;
+    background: #6f16ff;
+    border-radius: 20px;
     opacity: 1;
     cursor: pointer;
 }
 
 .topSearchTitle {
     font-size: 30px;
-    margin-left: 20px;
+    /*margin-left: 20px;*/
     font-family: 'Josefin Sans', sans-serif;
 }
 
-#resultsHr,
-#resultsLastHr {
-    width: 28%;
-    height: 3px;
-    background: #ddd;
+#resultsHr{
+    width: 20%;
+    height: 2px;
+    background: #333;
     border-radius: 20px;
     margin-top: 25px;
     margin-bottom: 30px;
+    opacity: 0;
+}
+
+#resultsLastHr {
+    width: 20%;
+    height: 2px;
+    background: #333;
+    border-radius: 20px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+.topMostResult {
+    background: #171717;
+    border-radius: 120px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 120px;
+    overflow: hidden;
+    animation: topMostResult .55s;
+}
+
+#topMostResultMusicArt {
+    border-radius: 120px;
+    height: 120px;
+    box-shadow: 0 0 20px #000;
+}
+
+@keyframes topMostResult {
+    from {
+        width: 17%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+
+#topMostResultSongInfo {
+    margin-left: 22px;
+    display: flex;
+    position: relative;
+}
+#topMostResultSongTitle {
+    font-size: 24px;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-bottom: 7px;
+    width: 400px;
+}
+#topMostResultSongArtist {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #8f49ff;
+    font-size: 17px;
+    width: 400px;
+}
+
+#topMostResultIcons {
+    /*margin-top: 9px;*/
+    /*margin-left: 18px;*/
+    animation: topMostResultIcons 6s;
+    position: absolute;
+    left: 105%;
+    top: 20%;
+    width: 150px;
+}
+
+@keyframes topMostResultIcons {
+    from {
+        display: none;
+    }
+    to {
+        display: block;
+    }
+}
+
+#topMostResultPlayButton {
+    width: 25px;
+    margin-left: 17px;
+}
+#topMostResultFavButton, #topMostResultOptionButton {
+    width: 22px;
+    margin-left: 20px;
+}
+#topMostResultFavButton {
+    margin-left: 10px;
 }
 
 #topSearchesContainer {
@@ -248,7 +433,8 @@
 }
 
 #searchBack {
-    font-size: 25px;
+    font-size: 20px;
+    color: #777;
 }
 
 #mostRecentSearch {
@@ -275,6 +461,10 @@
     flex-direction: row;
 }
 
+#searchedFavButton {
+    opacity: 0;
+}
+
 #exploreSearchBox {
     padding: 7px;
     padding-left: 15px;
@@ -289,10 +479,45 @@
     box-shadow: 0 0 10px #8b42ff;
 }
 
+#null {
+    font-size: 1000px;
+    color: #fff;
+}
+
 @media (hover:hover) {
+
+    .searchResults:hover > #musicArtContainer > #searchedMusicArt {
+        opacity: .2;
+    }
+
+    .searchResults:hover > #musicArtContainer > #searchedPlayButton {
+        opacity: 1;
+    }
+
+    .searchResults:hover > #searchedSongInfo > #searchedIcons > #searchedFavButton {
+        opacity: 1;
+    }
+
+    #albumArtContainer:hover {
+        cursor: pointer;
+    }
+
+    #albumArtContainer:hover > #searchedAlbumPlayButton {
+        opacity: 1;
+    }
+    #albumArtContainer:hover > #searchedAlbumArt {
+        opacity: .1;
+    }
+    #albumArtContainer:hover > #searchedAlbumIcons {
+        opacity: 1;
+    }
+    #searchedAlbumPlayButton:hover {
+        transform: scale(1.1);
+    }
+
     .searchResults:hover {
-        transform: scale(1.05);
-        border-color: #7d3de6;
+        background: #181818;
+        box-shadow: 0 0 20px #111;
     }
 
     .searchedIcons:hover {
@@ -325,6 +550,18 @@
 
     #mostRecentSearch:hover {
         text-decoration: underline;
+    }
+    #musicArtContainer:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+    #topMostResultPlayButton:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+    #moreButton:hover {
+        cursor: pointer;
+        margin-left: 5px;
     }
 }
 

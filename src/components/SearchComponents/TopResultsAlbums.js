@@ -7,22 +7,26 @@ import play from '../../resources/play.png';
 
 function TopResults(props) {
   return (
-    <div style={{background: `${props.boxColor}`}} className="searchResults">
-        {props.musicArt && 
-            <img id="searchedMusicArt" src={props.musicArt} alt={defaultImg} />
+    <div style={{background: `${props.boxColor}`}} className="searchAlbumResults">
+        {props.musicArt &&
+            <div id="albumArtContainer" onClick={() => {props.playMusic(props.songID)}}>
+                <object id="searchedAlbumArt" data={props.musicArt} type="image/png">
+                    <img id="failedMusicArt" src={defaultImg} onError={defaultImg}  alt={''}/>
+                </object>
+                <img draggable={false} id="searchedAlbumPlayButton" src={play} alt="" />
+                <div id="searchedAlbumIcons">
+                    <img id="searchedAlbumFavButton" className="searchedIcons" src={unfav} alt="" />
+                    <img id="searchedAlbumOptionButton" className="searchedIcons" src={dots} alt="" />
+                </div>
+            </div>
         }
         {!props.musicArt && 
-            <img id="searchedMusicArt" src={defaultImg} alt={defaultImg} />
+            <img id="searchedAlbumArt" src={defaultImg} alt={defaultImg} />
         }
-        <div id="searchedSongInfo">
+        <div id="searchedAlbumInfo">
             <div id="actualInfo">
-                <div style={{color: props.textColor}} id="searchedSongTitle">{props.songName}</div>
-                <div id="searchedSongArtist">{props.songArtist}</div>
-            </div>
-            <div id="searchedAlbumIcons">
-                <img onClick={() => {props.playMusic(props.songID)}} id="searchedPlayButton" className="searchedIcons" src={play} alt="" />
-                <img id="searchedFavButton" className="searchedIcons" src={unfav} alt="" />
-                <img id="searchedOptionButton" className="searchedIcons" src={dots} alt="" />
+                <div style={{color: props.textColor}} id="searchedAlbumTitle">{props.songName}</div>
+                <div id="searchedAlbumArtist">{props.songArtist}</div>
             </div>
         </div>
     </div>

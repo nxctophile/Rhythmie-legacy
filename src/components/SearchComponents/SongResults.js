@@ -9,6 +9,7 @@ function SongResults(props) {
 
   return (
     <>
+      <div style={{color: props.textColor}} className="topSearchTitle" id="songsTitle">Songs</div>
     {props.searchLoadingState &&
         <SearchLoading
             margin="25vh"
@@ -19,10 +20,11 @@ function SongResults(props) {
             {props.searchResult.results.results.map(element => {
                 return (
                     <SearchResults
-                        songName={props.limitString(element.name, 22)}
+                        songName={props.limitString(element.name, 40)}
                         songArtist={props.limitString(element.primaryArtists, 30)}
                         musicArt={element.image[0].link}
                         songID={element.id}
+                        songDuration={props.converter(element.duration)}
                         theme={props.theme}
                         textColor={props.textColor}
                         boxColor={props.boxColor}
@@ -34,7 +36,7 @@ function SongResults(props) {
             <div style={{color: props.textColor}} id="seeMore">
                 See more results
             </div>
-            <hr style={{width: '15%'}} id="resultsHr" />
+          <div style={{width: '15%'}} id="resultsHr"></div>
         </section>
     }
     </>

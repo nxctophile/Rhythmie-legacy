@@ -57,6 +57,7 @@
   margin-top: 15px;
   caret-color: #6f16ff;
   filter: drop-shadow(0 0 20px #000);
+  /*box-shadow: 0 0 20px #000;*/
 }
 #searchBox:focus {
   box-shadow: 0 0 15px #383344;
@@ -69,13 +70,11 @@
   font-weight: 600;
   border: 2px solid #5a00eb;
   border-radius: 20px;
-  border-style: solid;
   background: #8b42ff;
   color: #fff;
   transition: .2s;
   -webkit-touch-callout: none;
     -webkit-user-select: none;
-     -khtml-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;

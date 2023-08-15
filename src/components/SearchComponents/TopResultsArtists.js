@@ -9,11 +9,11 @@ function TopResults(props) {
     console.log(props.artistProfile);
   return (
     <div style={{background: `${props.boxColor}`}} className="searchResults">
-        {props.musicArt && 
-            <img id="searchedMusicArt" src={props.artistProfile} alt={defaultImg} />
+        {props.musicArt &&
+            <img id="searchedArtistArt" src={props.artistProfile} alt={defaultImg} />
         }
         {!props.musicArt && 
-            <img id="searchedMusicArt" src={props.artistProfile} alt={defaultImg} />
+            <img id="searchedArtistArt" src={props.artistProfile} alt={defaultImg} />
         }
         <div id="searchedSongInfo">
             <div id="actualInfo">

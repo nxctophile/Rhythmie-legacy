@@ -24,7 +24,7 @@ function Sidebar(props) {
         <div id="navMenu">
             <Link id="active" className="navMenuItem" style={{color: `${props.textColor}`}} to="/">
                 <div>
-                     <img className="navMenuIcon" src={home} alt="Home icon"/>
+                     <img id="homeIcon" className="navMenuIcon" src={home} alt="Home icon"/>
                         <span className="navMenuText">
                             Home
                         </span>
@@ -35,14 +35,6 @@ function Sidebar(props) {
                      <img className="navMenuIcon" src={explore} alt="Explore"/>
                         <span className="navMenuText">
                             Explore
-                        </span>
-                </div>
-            </Link>
-            <Link className="navMenuItem" style={{color: `${props.textColor}`}} to="/mv">
-                <div>
-                     <img className="navMenuIcon" src={mv} alt="MVs"/>
-                        <span className="navMenuText">
-                            Music Videos
                         </span>
                 </div>
             </Link>

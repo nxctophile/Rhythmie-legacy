@@ -6,6 +6,7 @@ import ArtistSearchResults from './ArtistSearchResults';
 function ArtistResults(props) {
   return (
     <>
+      <div className="topSearchTitle" id="songsTitle">Artists</div>
     {props.searchLoadingState &&
         <SearchLoading
             margin="25vh"

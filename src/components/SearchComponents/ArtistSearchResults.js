@@ -9,10 +9,10 @@ function ArtistSearchResults(props) {
   return (
     <div style={{background: `${props.boxColor}`}} className="searchResults">
         {props.artistProfile &&
-            <img id="searchedMusicArt" src={props.artistProfile} alt={defaultImg} />
+            <img id="searchedArtistArt" src={props.artistProfile} alt={defaultImg} />
         }
         {!props.artistProfile &&
-            <img id="searchedMusicArt" src={defaultImg} alt={defaultImg} />
+            <img id="searchedArtistArt" src={defaultImg} alt={defaultImg} />
         }
         <div id="searchedSongInfo">
             <div id="actualInfo">

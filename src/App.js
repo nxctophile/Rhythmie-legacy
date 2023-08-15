@@ -49,38 +49,23 @@ export default function App() {
       document.getElementsByClassName("navMenuItem")[0].id = "";
       document.getElementsByClassName("navMenuItem")[1].id = "active";
       document.getElementsByClassName("navMenuItem")[2].id = "";
-      document.getElementsByClassName("navMenuItem")[3].id = "";
       document.getElementsByClassName("bottomNavMenuItem")[0].id = "";
       document.getElementsByClassName("bottomNavMenuItem")[1].id = "active";
       document.getElementsByClassName("bottomNavMenuItem")[2].id = "";
-      document.getElementsByClassName("bottomNavMenuItem")[3].id = "";
-    } else if (window.location.href.includes("mv")) {
-      document.getElementsByClassName("navMenuItem")[0].id = "";
-      document.getElementsByClassName("navMenuItem")[1].id = "";
-      document.getElementsByClassName("navMenuItem")[2].id = "active";
-      document.getElementsByClassName("navMenuItem")[3].id = "";
-      document.getElementsByClassName("bottomNavMenuItem")[0].id = "active";
-      document.getElementsByClassName("bottomNavMenuItem")[1].id = "";
-      document.getElementsByClassName("bottomNavMenuItem")[2].id = "";
-      document.getElementsByClassName("bottomNavMenuItem")[3].id = "";
     } else if (window.location.href.includes("mylibrary")) {
       document.getElementsByClassName("navMenuItem")[0].id = "";
       document.getElementsByClassName("navMenuItem")[1].id = "";
-      document.getElementsByClassName("navMenuItem")[2].id = "";
-      document.getElementsByClassName("navMenuItem")[3].id = "active";
+      document.getElementsByClassName("navMenuItem")[2].id = "active";
       document.getElementsByClassName("bottomNavMenuItem")[0].id = "";
       document.getElementsByClassName("bottomNavMenuItem")[1].id = "";
-      document.getElementsByClassName("bottomNavMenuItem")[2].id = "";
-      document.getElementsByClassName("bottomNavMenuItem")[3].id = "active";
+      document.getElementsByClassName("bottomNavMenuItem")[2].id = "active";
     } else {
       document.getElementsByClassName("navMenuItem")[0].id = "active";
       document.getElementsByClassName("navMenuItem")[1].id = "";
       document.getElementsByClassName("navMenuItem")[2].id = "";
-      document.getElementsByClassName("navMenuItem")[3].id = "";
       document.getElementsByClassName("bottomNavMenuItem")[0].id = "";
       document.getElementsByClassName("bottomNavMenuItem")[1].id = "";
       document.getElementsByClassName("bottomNavMenuItem")[2].id = "active";
-      document.getElementsByClassName("bottomNavMenuItem")[3].id = "";
     }
   });
   useEffect(() => {
@@ -208,24 +193,21 @@ export default function App() {
     }
   }
 
-  let temp = 0;
+  let debounceTimeout = null;
   function searchHandler() {
-    if (temp === 1 || temp % 7 === 0)
-      setTimeout(() => {
+      clearTimeout(debounceTimeout); // Clear any existing timeout
+      debounceTimeout = setTimeout(() => {
         let searchData = document.getElementById("searchBox").value;
         search(searchData);
-      }, 2000);
-    temp++;
-    console.log(temp);
+      }, 1600);
   }
+
   function exploreSearchHandler() {
-    if (temp === 1 || temp % 7 === 0)
-      setTimeout(() => {
-        let searchData = document.getElementById("exploreSearchBox").value;
-        search(searchData);
-      }, 2000);
-    temp++;
-    console.log(temp);
+    clearTimeout(debounceTimeout); // Clear any existing timeout
+    debounceTimeout = setTimeout(() => {
+      let searchData = document.getElementById("searchBox").value;
+      search(searchData);
+    }, 1600);
   }
 
   function topSearchHandler(query) {
@@ -251,21 +233,20 @@ export default function App() {
   }
   function music() {
     const music = document.getElementById("music");
-    const prevButton = document.getElementById("prevButton");
-    const nextButton = document.getElementById("nextButton");
+    const playPause = document.getElementById("playPause");
     document.title = `${musicState.songArtist} - ${musicState.songTitle} | Rhythmie`;
     if (x % 2 === 0) {
       music.play();
       setPlayState(pause);
       currentMusicDuration();
-      prevButton.style.marginRight = "10px";
-      nextButton.style.marginLeft = "10px";
+      playPause.style.marginLeft="2px";
+      playPause.style.marginRight="2px";
     } else {
       music.pause();
       setPlayState(play);
       clearInterval(interval);
-      prevButton.style.marginRight = "20px";
-      nextButton.style.marginLeft = "20px";
+      playPause.style.marginLeft="10px";
+      playPause.style.marginRight="10px";
     }
   }
   function handleSpace() {
@@ -425,6 +406,7 @@ export default function App() {
                   handleSpace={handleSpace}
                   searchHandler={exploreSearchHandler}
                   limitString={limitString}
+                  converter={converter}
                 />
               )
             }

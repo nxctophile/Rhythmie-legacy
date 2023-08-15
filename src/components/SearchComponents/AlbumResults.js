@@ -6,6 +6,7 @@ import AlbumSearchResults from './AlbumSearchResults';
 function AlbumResults(props) {
   return (
     <>
+      <div style={{color: props.textColor}} className="topSearchTitle" id="songsTitle">Albums</div>
     {props.searchLoadingState &&
         <SearchLoading
             margin="25vh"

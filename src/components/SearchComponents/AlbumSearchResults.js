@@ -10,15 +10,15 @@ function AlbumSearchResults(props) {
   return (
     <div style={{background: `${props.boxColor}`}} className="searchResults">
         {props.albumArt && 
-            <img id="searchedMusicArt" src={props.albumArt} alt={defaultImg} />
+            <img id="searchedAlbumArt" src={props.albumArt} alt={defaultImg} />
         }
         {!props.albumArt && 
-            <img id="searchedMusicArt" src={defaultImg} alt={defaultImg} />
+            <img id="searchedAlbumArt" src={defaultImg} alt={defaultImg} />
         }
-        <div id="searchedSongInfo">
+        <div id="searchedAlbumInfo">
             <div id="actualInfo">
-                <div style={{color: props.textColor}} id="searchedSongTitle">{props.albumName}</div>
-                <div id="searchedSongArtist">{props.albumArtist}</div>
+                <div style={{color: props.textColor}} id="searchedAlbumTitle">{props.albumName}</div>
+                <div id="searchedAlbumArtist">{props.albumArtist}</div>
             </div>
             <div id="searchedIcons">
             <div id="totalMusicDuration">

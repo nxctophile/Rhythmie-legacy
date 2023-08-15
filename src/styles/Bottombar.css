@@ -7,7 +7,7 @@
   align-items: center;
   flex-direction: column;
   z-index: 0;
-  /* background: #381a6b; */
+   /*background: #381a6b;*/
   /* background-color: #f00; */
   /* background-image: linear-gradient(5deg, #3d2070 0%, #06000f 70%); */
   /* background-image: linear-gradient(to left, #000, #222, #000); */
@@ -31,29 +31,33 @@
   position: absolute;
 }
 #musicComponent {
-  margin: 20px;
+  margin: 26px 20px 20px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#musicComponent > img {
+
+#musicComponent > a > img {
   margin: 10px;
   transition: 0.3s;
   /* padding: 10px; */
 }
 #playPause {
   width: 28px;
+  margin: 5px 2px;
 }
 #nextButton,
 #prevButton {
   transition: 0.4s;
   width: 22px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 #repeatButton,
 #shuffleButton {
   width: 20px;
 }
-#musicComponent > img:hover {
+#musicComponent > a > img:hover {
   transform: scale(1.1);
   cursor: pointer;
 }

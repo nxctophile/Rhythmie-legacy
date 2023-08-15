@@ -92,6 +92,8 @@ function Bottombar(props) {
     }
   }, [props.songTitle]);
 
+  let youtube =  `https://www.youtube.com/results?search_query=${props.songTitle} by ${props.songArtist}`;
+
   return (
     <>
       <div
@@ -128,13 +130,14 @@ function Bottombar(props) {
         )}
         {props.playerLoading && <Playerloading />}
         <div id="musicInfo">
+          <a id="youtubeLink" href={youtube}>
             <img
-                style={{ boxShadow: `${props.musicArtTheme}` }}
                 draggable={false}
                 id="musicArt"
                 src={props.musicArt}
                 alt="Music art"
             />
+          </a>
           <div id="songInfo">
             <div id="songTitle">
               <span dangerouslySetInnerHTML={{ __html: songName }}></span>

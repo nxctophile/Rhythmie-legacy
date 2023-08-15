@@ -24,19 +24,6 @@ function ExplorePage(props) {
       }
       ]
     })
-
-
-    // function converter (value) {
-    //     let val = Math.round(value);
-    //     const h = Math.floor(val / 3600);
-    //     const m = Math.floor(val % 3600 / 60);
-    //     const s = Math.floor(val % 3600 % 60);
-    //     const hours = h > 0 ? h + ':' : "";
-    //     const minutes = m > 0 ? (m<10 ? '0'+m : m) + ':' : "00:";
-    //     const seconds = s > 0 ? (s<10 ? '0'+s : s) : "00";
-    //     let duration = hours + minutes + seconds
-    //     return duration;
-    // }
     function playMusic(ID) {
 
         props.setMusic(ID);
@@ -124,7 +111,7 @@ function ExplorePage(props) {
                     <Routes>
                         <Route path='/' element={
                             <div id="topSearchesContainer">
-                                <div style={{color: props.textColor}} id="topSearchesText">
+                                <div id="topSearchesText">
                                 Top Searches
                                 <img id="topSearchesIcon" src="https://c.tenor.com/S8dOItPNscgAAAAi/loop-loading.gif" alt="" /></div>
                                 
@@ -153,17 +140,17 @@ function ExplorePage(props) {
                                     <span id="searchBack" onClick={() => window.history.go(-1)} className="material-symbols-outlined">
                                         arrow_back_ios
                                     </span>
-                                    <div style={{color: `${props.textColor}`}} id="activeMusicTitle" className="searchedMusicTitle">
-                                        <Link style={{color: `${props.textColor}`}} to="/">Top Results</Link>
+                                    <div id="activeMusicTitle" className="searchedMusicTitle">
+                                        <Link style={{color: '#fff'}} to="/">Top Results</Link>
                                     </div>
-                                    <div onClick={songResults} style={{color: `${props.textColor}`}} className="searchedMusicTitle">
-                                        <Link style={{color: `${props.textColor}`}} to="/explore/songs">Songs</Link>
+                                    <div onClick={songResults} className="searchedMusicTitle">
+                                        <Link to="/explore/songs">Songs</Link>
                                     </div>
-                                    <div onClick={albumResults} style={{color: `${props.textColor}`}} className="searchedMusicTitle">
-                                        <Link style={{color: `${props.textColor}`}} to="/explore/albums">Albums</Link>
+                                    <div onClick={albumResults} className="searchedMusicTitle">
+                                        <Link to="/explore/albums">Albums</Link>
                                     </div>
-                                    <div onClick={artistResults} style={{color: `${props.textColor}`}} className="searchedMusicTitle">
-                                        <Link style={{color: `${props.textColor}`}} to="/explore/artists">Artists</Link>
+                                    <div onClick={artistResults} className="searchedMusicTitle">
+                                        <Link to="/explore/artists">Artists</Link>
                                     </div>
                                 </div>
                                 <TopResult
@@ -209,6 +196,7 @@ function ExplorePage(props) {
                                     searchProgress={props.searchProgress}
                                     playMusic={playMusic}
                                     limitString={props.limitString}
+                                    converter={props.converter}
                                 />
                             </>
                             }>

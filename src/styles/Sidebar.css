@@ -89,6 +89,12 @@ nav > hr {
   background: rgba(165, 165, 165, 0.164);
   transform: translateX(20px);
 }
+
+#homeIcon {
+  width: 27px;
+  margin-left: 2px;
+}
+
 #active {
     background: rgba(165, 165, 165, 0.164);
     cursor: pointer;
