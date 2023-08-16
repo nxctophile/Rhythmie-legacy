@@ -24,6 +24,9 @@ const restoreImage = () => {
 
 export default function App() {
   const [greeting, setGreeting] = useState("Hey There,");
+  const [localData, setLocalData] = useState();
+  const [likedData, setLikedData] = useState([]);
+  const [queue, setQueue] = useState(sessionStorage.getItem('queue'));
   function initGreeting() {
     const date = new Date();
     if(date.getHours() >= 6 && date.getHours() <= 12) {
@@ -71,6 +74,12 @@ export default function App() {
   useEffect(() => {
     fetchHomeData();
     initGreeting();
+    if (localStorage.getItem('recentSong')) {
+      setLocalData(JSON.parse(localStorage.getItem('recentSong')));
+    }
+    if (localStorage.getItem('likedSongs')) {
+      setLikedData(JSON.parse(localStorage.getItem('likedSongs')));
+    }
   }, []);
 
   const navigate = useNavigate();
@@ -167,6 +176,21 @@ export default function App() {
       music();
       x++;
       document.title = `${musicState.songArtist} - ${musicState.songTitle}`;
+      const localData = {
+        songName: limitString(parsedData.data[0].name, 30),
+        songArtist: limitString(parsedData.data[0].primaryArtists, 40),
+        songArt: parsedData.data[0].image[2].link,
+        song_ID: songID,
+      }
+      const queueData = {
+        songName: limitString(parsedData.data[0].name, 30),
+        songArtist: limitString(parsedData.data[0].primaryArtists, 40),
+        songArt: parsedData.data[0].image[0].link,
+        song_ID: songID,
+      }
+      localStorage.setItem('recentSong', JSON.stringify(localData));
+      sessionStorage.setItem('queue', JSON.stringify(queueData));
+      setQueue(queueData)
     }, 2000);
   };
   function updateSeek() {
@@ -248,6 +272,8 @@ export default function App() {
       playPause.style.marginLeft="10px";
       playPause.style.marginRight="10px";
     }
+    setTimeout(() => {
+    }, 5000);
   }
   function handleSpace() {
     const searchBox = document.getElementById("searchBox");
@@ -360,6 +386,7 @@ export default function App() {
     <>
         <Sidebar
           mountExplore={mountExplore}
+          queue={queue}
         />
       <div id="body">
 
@@ -387,6 +414,8 @@ export default function App() {
                   results={homePageResults[0].data.trending.albums}
                   limitString={limitString}
                   homeCardSearch={homeCardSearch}
+                  localData={localData}
+                  likedData={likedData}
                 />
               )
             }

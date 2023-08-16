@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import '../styles/Sidebar.css'
 import icon from "../resources/icon.png"
 import { Link } from 'react-router-dom'
@@ -6,8 +6,13 @@ import home from "../resources/home.png"
 import explore from "../resources/explore.png"
 import mv from "../resources/mv.png"
 import library from "../resources/library.png"
+import nowPlayingIcon from '../resources/wave.png';
+import defaultImg from "../resources/default.png";
 
 function Sidebar(props) {
+
+    // useEffect(() => {
+    // }, []);
   return (
     <nav id="sideNav" style={{background: `${props.theme}`, color: `${props.textColor}`}}>
         <div id="barTitle">
@@ -51,11 +56,36 @@ function Sidebar(props) {
             <div id="playQueueTitle">
                 Your Queue
             </div>
-            <div id="emptyQueue">
-                <button style={{color: `${props.textColor}`}} id="createQueueButton">
-                    Create a queue +
-                </button>
+            {props.queue.songName !== undefined &&
+            <div id="queueContainer">
+                <div id="queueItem">
+                    <div id="queueItemArtContainer">
+                        <object id="queueItemArt" data={props.queue.songArt} type="image/png">
+                            <img id="queueItemArt" src={defaultImg} onError={defaultImg}  alt={''}/>
+                        </object>
+                    </div>
+                    <div id="queueItemInfo">
+                        <div id="queueItemTitle">{props.queue.songName}</div>
+                        <div id="queueItemArtist">{props.queue.songArtist}</div>
+                    </div>
+                    <div id="nowPlayingIconContainer">
+                        <img src={nowPlayingIcon} id="nowPlayingIcon"/>
+                    </div>
+                </div>
+                <div id="clearQueue">
+                    <div id="clearQueueButton">
+                        Clear queue
+                    </div>
+                </div>
             </div>
+            }
+            {props.queue.songName === undefined &&
+            <div id="emptyQueue">
+                <div id="createQueueButton">
+                    Create a queue
+                </div>
+            </div>
+            }
         </div>
     </nav>
   )

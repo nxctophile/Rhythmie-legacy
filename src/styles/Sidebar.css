@@ -1,22 +1,15 @@
 #sideNav {
   display: flex;
-  align-items: left;
   flex-direction: column;
   z-index: 3;
-  /* margin-top: 2px; */
   width: 245px;
   height: 70vh;
   padding: 10px;
-  padding-right: 20px;
-  /* border-right: 2px solid #c4c4c4; */
-  /* box-shadow: 0 0 7px #777; */
-  /* border-bottom-right-radius: 30px; */
   overflow: hidden;
   position: fixed;
   background: #171717;
   -webkit-touch-callout: none;
     -webkit-user-select: none;
-     -khtml-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
@@ -73,21 +66,62 @@ nav > hr {
   margin-top: 20px;
   margin-left: 10px;
 }
-#createQueueButton {
-  font-size: 20px;
-  margin-top: 20px;
-  margin-left: 10px;
-  padding: 10px;
-  background: transparent;
-  border-style: solid;
-  border-radius: 10px;
-  border-color: #ccc;
-  transition: .2s;
+
+#emptyQueue {
+  display: flex;
+  flex-direction: column;
 }
-#createQueueButton:hover {
-  cursor: pointer;
-  background: rgba(165, 165, 165, 0.164);
-  transform: translateX(20px);
+
+#createQueueButton {
+  font-size: 17px;
+  margin: 17px 10px;
+  color: #999;
+}
+
+#clearQueueButton {
+  font-size: 15px;
+  margin: 15px 80px;
+  color: #999;
+}
+
+
+#queueContainer {
+  margin-top: 20px;
+}
+
+#queueItem {
+  display: flex;
+  background: #222;
+  align-items: center;
+  height: 50px;
+  border-radius: 20px;
+}
+#queueItemArtContainer {
+  display: flex;
+  margin-left: 10px;
+}
+#queueItemArt {
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
+}
+#queueItemTitle {
+  font-size: 15px;
+  margin-bottom: 2px;
+}
+#queueItemArtist {
+  font-size: 12px;
+  color: #999;
+}
+#queueItemInfo {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  width: 154px;
+}
+
+#nowPlayingIcon {
+  width: 20px;
 }
 
 #homeIcon {

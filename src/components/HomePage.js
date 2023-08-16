@@ -17,6 +17,7 @@ function HomePage(props) {
         usernameInput.focus();
     }
 
+
   return (
     <section style={{background: `${props.theme}`, color: `${props.textColor}`}} id="homePage">
         <div id="content">
@@ -49,14 +50,14 @@ function HomePage(props) {
                     <div id="lastPlayedSectionTitle">Pick up where you left off</div>
                     <div id="lastPlayed">
                         <div id="lastPlayedArt">
-                            <img src="https://c.saavncdn.com/820/Blinding-Lights-English-2020-20200912094411-150x150.jpg"/>
+                            <img src={props.localData.songArt}/>
                         </div>
                         <div id="lastPlayedDetails">
-                            <div id="lastPlayedTitle">Blinding Lights</div>
-                            <div id="lastPlayedArtist">The Weeknd</div>
+                            <div id="lastPlayedTitle">{props.localData.songName}</div>
+                            <div id="lastPlayedArtist">{props.localData.songArtist}</div>
                         </div>
                         <div id="playButtonEffectContainer">
-                            <img id="playButtonEffect" src={play}/>
+                            <img onClick={() => {props.setMusic(props.localData.song_ID)}} id="playButtonEffect" src={play}/>
                         </div>
                     </div>
                 </div>
@@ -67,7 +68,7 @@ function HomePage(props) {
                         </div>
                         <div id="likedSongsDetails">
                             <div id="likedSongsTitle">Your liked songs</div>
-                            <div id="likedSongsNumber">52 Songs</div>
+                            <div id="likedSongsNumber">{props.likedData.length} Songs</div>
                         </div>
                         <div id="playButtonEffectContainer">
                             <img id="playButtonEffect" src={play}/>

@@ -25,7 +25,6 @@ function ExplorePage(props) {
       ]
     })
     function playMusic(ID) {
-
         props.setMusic(ID);
     }
     function songResults() {
