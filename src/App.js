@@ -24,9 +24,19 @@ const restoreImage = () => {
 
 export default function App() {
   const [greeting, setGreeting] = useState("Hey There,");
-  const [localData, setLocalData] = useState();
+  const [localData, setLocalData] = useState({
+    songName: "Your recent song here",
+    songArtist: "Song artist",
+    songArt: defaultImg,
+    song_ID: "someID",
+  });
   const [likedData, setLikedData] = useState([]);
-  const [queue, setQueue] = useState(sessionStorage.getItem('queue'));
+  const [queue, setQueue] = useState({
+    songName: undefined,
+    songArtist: "Song artist",
+    songArt: defaultImg,
+    song_ID: "someID",
+  });
   function initGreeting() {
     const date = new Date();
     if(date.getHours() >= 6 && date.getHours() <= 12) {
@@ -183,7 +193,7 @@ export default function App() {
         song_ID: songID,
       }
       const queueData = {
-        songName: limitString(parsedData.data[0].name, 30),
+        songName: limitString(parsedData.data[0].name, 16),
         songArtist: limitString(parsedData.data[0].primaryArtists, 40),
         songArt: parsedData.data[0].image[0].link,
         song_ID: songID,
@@ -351,7 +361,7 @@ export default function App() {
     artistQuery.split(" ").forEach((element) => {
       artist += element + "+";
     });
-    window.open("https://duckduckgo.com/?q=" + artist, "_blank");
+    window.open("https://genius.com/search?q=" + artist, "_blank");
   }
 
   const homeCardSearch = (title) => {
